@@ -709,9 +709,9 @@ a {
   vertical-align: middle; }
 
 #header {
-  height: 0.48rem;
+  height: 1.173333rem;
   background: #4577dc;
-  padding: 0 0.16rem; }
+  padding: 0 0.4rem; }
   #header header {
     display: -webkit-box;
     display: -webkit-flex;
@@ -720,9 +720,13 @@ a {
     -webkit-align-items: center;
     align-items: center; }
     #header header h1 a img {
-      margin-top: -0.01rem; }
-    #header header > a {
+      margin-top: -0.10rem;
+      width: 2.8rem; }
+    #header header a {
       color: #fff; }
+    #header header .index-login {
+      margin-left: 1.7rem;
+      margin-right: .4rem; }
 
 .m-index {
   height: 100%;

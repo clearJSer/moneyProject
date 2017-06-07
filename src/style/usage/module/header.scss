@@ -1,19 +1,24 @@
 #header{
-    height: 0.48rem;
+    height: 1.173333rem;
     background: #4577dc;
-    padding: 0 0.16rem;
+    padding: 0 0.4rem;
     header{
         @include flexbox();
         @include align-items(center);
         h1{
             a{
                 img{
-                    margin-top: -0.01rem;
+                    margin-top: -0.10rem;
+                    width: 2.8rem;
                 }
             }
         }
-        >a{
+        a{
             color: #fff;
+        }
+        .index-login{
+            margin-left: 1.7rem;
+            margin-right: .4rem;
         }
     }
 }

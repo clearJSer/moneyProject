@@ -4,16 +4,16 @@ Error: Undefined mixin 'flexbox'.
         from line 6 of header.scss
 
 1: #header{
-2:     height: 0.48rem;
+2:     height: 1.173333rem;
 3:     background: #4577dc;
-4:     padding: 0 0.16rem;
+4:     padding: 0 0.4rem;
 5:     header{
 6:         @include flexbox();
 7:         @include align-items(center);
 8:         h1{
 9:             a{
 10:                 img{
-11:                     margin-top: -0.01rem;
+11:                     margin-top: -0.10rem;
 
 Backtrace:
 header.scss:6:in `flexbox'
@@ -76,4 +76,4 @@ C:/Ruby22-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flexbox'.\A         on line 6 of header.scss, in `flexbox'\A         from line 6 of header.scss\A \A 1: #header{\A 2:     height: 0.48rem;\A 3:     background: #4577dc;\A 4:     padding: 0 0.16rem;\A 5:     header{\A 6:         @include flexbox();\A 7:         @include align-items(center);\A 8:         h1{\A 9:             a{\A 10:                 img{\A 11:                     margin-top: -0.01rem;"; }
+  content: "Error: Undefined mixin 'flexbox'.\A         on line 6 of header.scss, in `flexbox'\A         from line 6 of header.scss\A \A 1: #header{\A 2:     height: 1.173333rem;\A 3:     background: #4577dc;\A 4:     padding: 0 0.4rem;\A 5:     header{\A 6:         @include flexbox();\A 7:         @include align-items(center);\A 8:         h1{\A 9:             a{\A 10:                 img{\A 11:                     margin-top: -0.10rem;"; }
