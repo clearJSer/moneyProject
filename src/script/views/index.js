@@ -1,4 +1,4 @@
-var headerTpl = require('../tpls/header.string')
+var headerTpl = require('../tpls/header-login.string')
 var footerTpl = require('../tpls/footer.string')
 var indexTpl = require('../tpls/index.string')
 
