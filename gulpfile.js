@@ -23,8 +23,8 @@ gulp.task('watch',function(){
 	gulp.watch('./src/script/**/*.js', ['packjs'])
 	gulp.watch('./src/style/**/*.scss',['packcss'])
 	gulp.watch('./src/script/**/*.string', ['packjs'])
-  gulp.watch('./src/images/**/*', ['copyimage'])
-  gulp.watch('./src/libs/**/*', ['copylibs'])
+  	gulp.watch('./src/images/**/*', ['copyimage'])
+  	gulp.watch('./src/libs/**/*', ['copylibs'])
 })
 
 
@@ -92,6 +92,7 @@ gulp.task('packjs',function(){
 		.pipe(gulp.dest('./build/script'))
 })
 
+<<<<<<< HEAD
 // 打包 scss
 gulp.task('packcss', function () {
 gulp.src([
@@ -100,6 +101,13 @@ gulp.src([
 ])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./build/style'))
+=======
+//打包css
+gulp.task('packcss',function(){
+	gulp.src(['./src/style/usage/app-login.scss','./src/style/usage/app.scss','./src/style/lib/*.css'])
+		.pipe(sass().on('error',sass.logError))
+		.pipe(gulp.dest('./build/style'))
+>>>>>>> qzh
 })
 
 // copy images

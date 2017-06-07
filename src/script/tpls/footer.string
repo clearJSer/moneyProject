@@ -1,8 +1,28 @@
 <footer>
 	<ul>
-		<li>首页</li>
-		<li>投资</li>
-		<li>账户</li>
-		<li>更多</li>
+		<li>
+			<dl>
+				<dt class="yo-ico">&#xe604;</dt>
+				<dd>首页</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt class="yo-ico">&#xe60b;</dt>
+				<dd>投资</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt class="yo-ico">&#xe601;</dt>
+				<dd>账户</dd>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dt class="yo-ico">&#xe627;</dt>
+				<dd>更多</dd>
+			</dl>
+		</li>
 	</ul>
 </footer>
