@@ -1,19 +1,33 @@
 #header{
-    height: 0.48rem;
+    height: 1.173333rem;
     background: #4577dc;
-    padding: 0 0.16rem;
+    padding: 0 0.4rem;
+    overflow: hidden;
     header{
         @include flexbox();
         @include align-items(center);
         h1{
             a{
                 img{
-                    margin-top: -0.01rem;
+                    margin-top: -0.14rem;
+                    width: 2.8rem;
                 }
             }
         }
         >a{
             color: #fff;
+            line-height: 1.25rem;
+        }
+        >a:nth-child(2){
+            margin-left: 2.8rem;
+            margin-right: 1rem;
+        }
+        >a:nth-child(3){
+            margin-right: .4rem;
+        }
+        >a:last-child{
+            font-size: .7rem;
+            margin-top: -0.15rem;
         }
     }
 }

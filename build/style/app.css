@@ -708,10 +708,15 @@ a {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle; }
 
+@font-face {
+  font-family: 'yofont';
+  src: url("/images/iconfont/iconfont.woff") format("woff"), url("/images/iconfont/iconfont.ttf") format("truetype"); }
+
 #header {
-  height: 0.48rem;
+  height: 1.173333rem;
   background: #4577dc;
-  padding: 0 0.16rem; }
+  padding: 0 0.4rem;
+  overflow: hidden; }
   #header header {
     display: -webkit-box;
     display: -webkit-flex;
@@ -720,9 +725,19 @@ a {
     -webkit-align-items: center;
     align-items: center; }
     #header header h1 a img {
-      margin-top: -0.01rem; }
+      margin-top: -0.14rem;
+      width: 2.8rem; }
     #header header > a {
-      color: #fff; }
+      color: #fff;
+      line-height: 1.25rem; }
+    #header header > a:nth-child(2) {
+      margin-left: 2.8rem;
+      margin-right: 1rem; }
+    #header header > a:nth-child(3) {
+      margin-right: .4rem; }
+    #header header > a:last-child {
+      font-size: .7rem;
+      margin-top: -0.15rem; }
 
 .m-index {
   height: 100%;
@@ -734,14 +749,73 @@ a {
   -webkit-flex-direction: column;
   flex-direction: column; }
   .m-index section {
+    width: 100% !important;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
     width: .1px; }
+    .m-index section .index-banner {
+      width: 100%;
+      height: 4rem; }
+      .m-index section .index-banner .swiper-container {
+        width: 100%;
+        height: 4rem; }
+        .m-index section .index-banner .swiper-container .swiper-pagination {
+          bottom: 8%;
+          left: 0;
+          width: 100%; }
+    .m-index section .index-adv {
+      width: 100%;
+      height: 0.933333rem;
+      background: #f1f1f1;
+      padding: 0 0.4rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+      .m-index section .index-adv span {
+        font-size: 0.42rem;
+        color: #4577DC; }
+    .m-index section .index-content {
+      width: 100%; }
+      .m-index section .index-content .detail_content {
+        width: 100%;
+        height: 2.3rem;
+        margin-top: 0.1rem;
+        border-bottom: 0.1rem solid #F1F1F1;
+        background: #fff; }
+        .m-index section .index-content .detail_content ul {
+          width: 100%;
+          height: 2rem;
+          margin: 0 auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex; }
+          .m-index section .index-content .detail_content ul li {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            width: .1px;
+            text-align: center; }
+            .m-index section .index-content .detail_content ul li dl dt img {
+              width: 30%;
+              height: 50%;
+              margin-top: 7%;
+              border-radius: 50%;
+              -webkit-background-clip: padding-box !important;
+              background-clip: padding-box !important; }
+            .m-index section .index-content .detail_content ul li dl dd {
+              color: #8f8f94;
+              height: 0.66rem;
+              font-size: 0.35rem;
+              line-height: 0.66rem; }
 
 #footer {
-  height: .67rem;
-  background: #efefef; }
+  width: 100%;
+  background: #efefef;
+  padding: 0.13333rem !important; }
   #footer ul {
     width: 100%;
     height: 100%;
@@ -754,4 +828,14 @@ a {
       flex: 1;
       width: .1px;
       text-align: center;
-      line-height: .67rem; }
+      margin-top: 0.106667rem; }
+      #footer ul li dl dt {
+        color: #6891E3;
+        height: 0.8rem;
+        font-size: 0.8rem;
+        line-height: 0.8rem; }
+      #footer ul li dl dd {
+        color: #999999 !important;
+        line-height: 0.533333rem; }
+    #footer ul li:first-child dd:nth-child(2) {
+      color: #d2a47f !important; }
