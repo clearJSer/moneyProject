@@ -1,14 +1,5 @@
 //引入gulp包
 var gulp = require('gulp')
-<<<<<<< HEAD
-//引入 gulp-webserver 包
-var webserver = require('gulp-webserver')
-//引入gulp-webpack包
-var webpack = require('gulp-webpack')
-//引入文件名提取包
-var named = require('vinyl-named')
-// 引入 gulp-sass 包
-=======
 //引入gulp-webserver包
 var webserver = require('gulp-webserver')
 
@@ -19,7 +10,6 @@ var webpack = require('gulp-webpack')
 var named = require('vinyl-named')
 
 // 引入gulp-sass包
->>>>>>> master
 var sass = require('gulp-sass')
 
 //定义默认任务
@@ -42,42 +32,26 @@ gulp.task('copyhtml',function(){
 	gulp.src('./src/*.html')
 		.pipe(gulp.dest('./build/'))
 })
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 //启动一个webserver服务
 gulp.task('webserver',function(){
 	gulp.src('./build/')
 		.pipe(
 			webserver({
-<<<<<<< HEAD
-				host:'10.9.166.9',
-				port:8000,
-				directoryListing:{
-					enable:true,
-=======
 				host:'localhost',
 				port:8000,
 				directoryListing:{//
 					enable:true,//是否生效
->>>>>>> master
 					path:'./build'
 				},
 				livereload: true
 			})
 		)
 })
-<<<<<<< HEAD
-//打包js
-gulp.task('packjs',function(){
-	gulp.src(['./src/script/app-login.js'])
-=======
 
 //打包js
 gulp.task('packjs',function(){
 	gulp.src(['./src/script/app-login.js','./src/script/app.js'])
->>>>>>> master
 		.pipe(named())
 		.pipe(webpack({
 			output:{
@@ -99,10 +73,7 @@ gulp.task('packjs',function(){
 		}))
 		.pipe(gulp.dest('./build/script'))
 })
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 //打包css
 gulp.task('packcss',function(){
 	gulp.src(['./src/style/useage/app-login.scss','./src/style/usage/app.scss'])
@@ -113,10 +84,6 @@ gulp.task('packcss',function(){
 gulp.task('copyimage', function () {
   gulp.src('./src/images/**/*')
     .pipe(gulp.dest('./build/images'))
-<<<<<<< HEAD
-})
-=======
 })
 
 
->>>>>>> master
