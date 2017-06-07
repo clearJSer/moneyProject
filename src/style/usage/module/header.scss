@@ -1,0 +1,19 @@
+#header{
+    height: 0.48rem;
+    background: #4577dc;
+    padding: 0 0.16rem;
+    header{
+        @include flexbox();
+        @include align-items(center);
+        h1{
+            a{
+                img{
+                    margin-top: -0.01rem;
+                }
+            }
+        }
+        >a{
+            color: #fff;
+        }
+    }
+}
