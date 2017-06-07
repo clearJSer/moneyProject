@@ -1,5 +1,47 @@
 <div class="m-index">
 	<div id="header"></div>
-	<section></section>
+	<section>
+		<div class="index-banner">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">Slide 1</div>
+			        <div class="swiper-slide">Slide 2</div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			    
+			    <!-- 如果需要导航按钮 -->
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+			</div>
+		</div>
+		<div class="index-adv">
+			<span class="yo-ico">&#xe625;</span>
+		</div>
+		<div class="index-content">
+			<div class="detail_content">
+				<ul>
+					<li>
+						<dl>
+							<dt><img src="./images/img-index/detail-1.png" /></dt>
+							<dd>立即充值</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="images/img-index/detail-2.png" /></dt>
+							<dd>邀请好友</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><img src="images/img-index/detail-3.png" /></dt>
+							<dd>关于我们</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 	<div id="footer"></div>
 </div>

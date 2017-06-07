@@ -22,8 +22,8 @@ gulp.task('watch',function(){
 	gulp.watch('./src/script/**/*.js', ['packjs'])
 	gulp.watch('./src/style/**/*.scss',['packcss'])
 	gulp.watch('./src/script/**/*.string', ['packjs'])
-  gulp.watch('./src/images/**/*', ['copyimage'])
-  gulp.watch('./src/libs/**/*', ['copylibs'])
+  	gulp.watch('./src/images/**/*', ['copyimage'])
+  	gulp.watch('./src/libs/**/*', ['copylibs'])
 })
 
 
@@ -76,7 +76,7 @@ gulp.task('packjs',function(){
 
 //打包css
 gulp.task('packcss',function(){
-	gulp.src(['./src/style/useage/app-login.scss','./src/style/usage/app.scss'])
+	gulp.src(['./src/style/usage/app-login.scss','./src/style/usage/app.scss','./src/style/lib/*.css'])
 		.pipe(sass().on('error',sass.logError))
 		.pipe(gulp.dest('./build/style'))
 })
@@ -86,4 +86,8 @@ gulp.task('copyimage', function () {
     .pipe(gulp.dest('./build/images'))
 })
 
-
+// copy libs
+gulp.task('copylibs', function () {
+  gulp.src('./src/script/libs/*.*')
+    .pipe(gulp.dest('./build/libs'))
+})

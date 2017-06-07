@@ -2,23 +2,32 @@
     height: 1.173333rem;
     background: #4577dc;
     padding: 0 0.4rem;
+    overflow: hidden;
     header{
         @include flexbox();
         @include align-items(center);
         h1{
             a{
                 img{
-                    margin-top: -0.10rem;
+                    margin-top: -0.14rem;
                     width: 2.8rem;
                 }
             }
         }
-        a{
+        >a{
             color: #fff;
+            line-height: 1.25rem;
         }
-        .index-login{
-            margin-left: 1.7rem;
+        >a:nth-child(2){
+            margin-left: 2.8rem;
+            margin-right: 1rem;
+        }
+        >a:nth-child(3){
             margin-right: .4rem;
+        }
+        >a:last-child{
+            font-size: .7rem;
+            margin-top: -0.15rem;
         }
     }
 }
