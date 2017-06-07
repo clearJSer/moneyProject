@@ -3,7 +3,7 @@ Error: Undefined mixin 'flexbox'.
         on line 7 of footer.scss, in `flexbox'
         from line 7 of footer.scss
 
-2:     height: .67rem;
+2:     height: 1.65rem;
 3:     background: #efefef;
 4:     ul{
 5:         width: 100%;
@@ -12,7 +12,7 @@ Error: Undefined mixin 'flexbox'.
 8:         li{
 9:             @include flex();
 10:             text-align: center;
-11:             line-height: .67rem;
+11:             line-height: 1.65rem;
 12:         }
 
 Backtrace:
@@ -76,4 +76,4 @@ C:/Ruby22-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flexbox'.\A         on line 7 of footer.scss, in `flexbox'\A         from line 7 of footer.scss\A \A 2:     height: .67rem;\A 3:     background: #efefef;\A 4:     ul{\A 5:         width: 100%;\A 6:         height: 100%;\A 7:         @include flexbox();\A 8:         li{\A 9:             @include flex();\A 10:             text-align: center;\A 11:             line-height: .67rem;\A 12:         }"; }
+  content: "Error: Undefined mixin 'flexbox'.\A         on line 7 of footer.scss, in `flexbox'\A         from line 7 of footer.scss\A \A 2:     height: 1.65rem;\A 3:     background: #efefef;\A 4:     ul{\A 5:         width: 100%;\A 6:         height: 100%;\A 7:         @include flexbox();\A 8:         li{\A 9:             @include flex();\A 10:             text-align: center;\A 11:             line-height: 1.65rem;\A 12:         }"; }

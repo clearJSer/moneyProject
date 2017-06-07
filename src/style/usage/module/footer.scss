@@ -1,5 +1,5 @@
 #footer{
-    height: .67rem;
+    height: 1.65rem;
     background: #efefef;
     ul{
         width: 100%;
@@ -8,7 +8,7 @@
         li{
             @include flex();
             text-align: center;
-            line-height: .67rem;
+            line-height: 1.65rem;
         }
     }
 }
