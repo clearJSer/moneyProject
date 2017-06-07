@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'yofont';
+  src: url("/images/iconfont/iconfont-ll.woff") format("woff"), url("/images/iconfont/iconfont-ll.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'yofont';
+  src: url("/images/iconfont/iconfont.woff") format("woff"), url("/images/iconfont/iconfont.ttf") format("truetype"); }
+
 /**
  * Yo框架全局base定义
  * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方
@@ -746,7 +754,12 @@ section {
     height: .44rem;
     padding: 0 .1rem;
     position: relative;
-    margin: 20px 0; }
+    margin: 20px 0;
+    position: relative;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
     section .input-div::after {
       pointer-events: none;
       position: absolute;
@@ -777,7 +790,8 @@ section {
           -webkit-transform: scale(0.33333);
           transform: scale(0.33333); } }
     section .input-div input {
-      border: 0; }
+      border: 0;
+      width: 68%; }
     section .input-div span {
       line-height: .44rem;
       color: #3f3f3f; }
@@ -788,6 +802,10 @@ section {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     justify-content: flex-end; }
+  section .phone {
+    justify-content: flex-start; }
+    section .phone input {
+      margin-left: 0.05rem; }
   section .login-btn {
     width: 100%;
     display: -webkit-box;

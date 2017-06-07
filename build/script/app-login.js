@@ -44,48 +44,59 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(6);
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/*** IMPORTS FROM imports-loader ***/
-
-
-	__webpack_require__(2)
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/*** IMPORTS FROM imports-loader ***/
-
-
-	var headerTpl = __webpack_require__(3)
-	var login = __webpack_require__(4)
-	var commonUtil = __webpack_require__(5)
-
-	commonUtil.renderBody(login)
-	commonUtil.render(document.getElementById('header'), headerTpl)
-
-
-/***/ }),
+/* 1 */,
+/* 2 */,
 /* 3 */
 /***/ (function(module, exports) {
 
 	module.exports = "<header>	<h1></h1>	<a href=\"javascript:;\">注册</a></header>"
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports) {
+/* 4 */,
+/* 5 */,
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"login-box\">  <div id=\"header\"></div>  <section>  		<div class=\"img-div\">	   		<img src=\"./images/login/login-logo.png\">  		</div>   		<div class=\"input-div\">   			<span>手机号码:</span>   			<input type=\"txt\" placeholder=\"请输入手机号码\">   		</div>   		<div class=\"input-div\">   			<span>登录密码:</span>   			<input type=\"password\" placeholder=\"请输入密码\">   		</div>   		<div class=\"forget\">   		<a href=\"javascript:;\">忘记密码</a>   		</div>   		<div class=\"login-btn\">   			<a href=\"javascript:;\">登录</a>   		  	<p>*市场有风险，投资需谨慎</p>   		</div>  </section></div>"
+	/*** IMPORTS FROM imports-loader ***/
+
+
+	__webpack_require__(7)
+
+
+
+
+
 
 /***/ }),
-/* 5 */
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/*** IMPORTS FROM imports-loader ***/
+
+
+	var headerTpl = __webpack_require__(3)
+	var login = __webpack_require__(8)
+	var commonUtil = __webpack_require__(9)
+
+	commonUtil.renderBody(login)
+	commonUtil.render(document.getElementById('header'), headerTpl)
+
+
+	console.log($);
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+	module.exports = "<div class=\"login-box\">  <div id=\"header\"></div>  <section>  		<div class=\"img-div\">	   		<img src=\"./images/login/login-logo.png\">  		</div>   		<div class=\"input-div phone\">   			<span>手机号码:</span>   			<input type=\"txt\" placeholder=\"请输入手机号码\">   		</div>   		<div class=\"input-div\">   			<span>登录密码:</span>   			<input type=\"password\" placeholder=\"请输入密码\">   			<span class=\"yo-ico eyes\">&#xe633;</span>   		</div>   		<div class=\"forget\">   		<a href=\"javascript:;\">忘记密码</a>   		</div>   		<div class=\"login-btn\">   			<a href=\"javascript:;\">登录</a>   		  	<p>*市场有风险，投资需谨慎</p>   		</div>  </section></div>"
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
