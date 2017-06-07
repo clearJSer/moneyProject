@@ -506,28 +506,33 @@
 ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+}
 
 html,
 body {
   overflow: hidden;
-  height: 100%; }
+  height: 100%;
+}
 
 ::-webkit-scrollbar {
-  display: none; }
+  display: none;
+}
 
 html {
   background-color: #eee;
   color: #212121;
   font-size: 100px;
   -webkit-user-select: none;
-  user-select: none; }
+  user-select: none;
+}
 
 body {
   margin: 0;
   font-size: 0.14em;
   line-height: 1.5;
-  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }
+  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+}
 
 ul,
 ol,
@@ -553,7 +558,8 @@ td,
 pre,
 xmp {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 input,
 textarea,
@@ -566,7 +572,8 @@ code,
 kbd,
 samp {
   line-height: inherit;
-  font-family: inherit; }
+  font-family: inherit;
+}
 
 h1,
 h2,
@@ -580,7 +587,8 @@ input,
 textarea,
 button,
 select {
-  font-size: inherit; }
+  font-size: inherit;
+}
 
 address,
 cite,
@@ -589,23 +597,27 @@ em,
 i,
 optgroup,
 var {
-  font-style: normal; }
+  font-style: normal;
+}
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
-  text-align: left; }
+  text-align: left;
+}
 
 ul,
 ol,
 menu {
-  list-style: none; }
+  list-style: none;
+}
 
 fieldset,
 img {
   border: 0;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 article,
 aside,
@@ -619,50 +631,59 @@ menu,
 nav,
 section,
 summary {
-  display: block; }
+  display: block;
+}
 
 audio,
 canvas,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "\0020"; }
+  content: "\0020";
+}
 
 textarea,
 pre,
 xmp {
   overflow: auto;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+}
 
 textarea {
-  resize: vertical; }
+  resize: vertical;
+}
 
 input,
 textarea,
 button,
 select
 a {
-  outline: 0 none; }
+  outline: 0 none;
+}
 
 input,
 textarea,
 button,
 select {
-  color: inherit; }
-  input:disabled,
-  textarea:disabled,
-  button:disabled,
-  select:disabled {
-    opacity: 1; }
+  color: inherit;
+}
+input:disabled,
+textarea:disabled,
+button:disabled,
+select:disabled {
+  opacity: 1;
+}
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
-  border: 0; }
+  border: 0;
+}
 
 input[type="button"],
 input[type="submit"],
@@ -670,24 +691,29 @@ input[type="reset"],
 input[type="file"]::-webkit-file-upload-button,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
-  appearance: none; }
+  appearance: none;
+}
 
 mark {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 a,
 ins,
 s,
 u,
 del {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a,
 img {
-  -webkit-touch-callout: none; }
+  -webkit-touch-callout: none;
+}
 
 a {
-  color: #00afc7; }
+  color: #00afc7;
+}
 
 .g-clear::after,
 .g-mod::after {
@@ -695,119 +721,23 @@ a {
   overflow: hidden;
   clear: both;
   height: 0;
-  content: "\0020"; }
+  content: "\0020";
+}
 
 @font-face {
   font-family: yofont;
-  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format("woff"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format("truetype"); }
-
+  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format("woff"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format("truetype");
+}
 .yo-ico {
   font-family: yofont !important;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-body {
-  background-color: #fff; }
-
-#header {
-  height: .48rem;
-  background-color: #4577dc;
-  width: 100%;
-  padding: 0 .1rem; }
-  #header header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    justify-content: space-between; }
-    #header header h1 {
-      width: 1.05rem;
-      height: .45rem;
-      background: url(../images/login/logo.png) no-repeat 0 -0.01rem; }
-    #header header a {
-      color: #fff;
-      font-size: .16rem; }
-
-section {
-  padding: .2rem; }
-  section .img-div {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center; }
-  section .input-div {
-    width: 100%;
-    height: .44rem;
-    padding: 0 .1rem;
-    position: relative;
-    margin: 20px 0; }
-    section .input-div::after {
-      pointer-events: none;
-      position: absolute;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      content: "\0020";
-      border-color: #b7b7b7;
-      border-style: solid;
-      border-width: 1px;
-      -webkit-transform-origin: 0 0;
-      transform-origin: 0 0; }
-      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-        section .input-div::after {
-          width: 100%;
-          height: 100%; } }
-      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-        section .input-div::after {
-          width: 200%;
-          height: 200%;
-          -webkit-transform: scale(0.5);
-          transform: scale(0.5); } }
-      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-        section .input-div::after {
-          width: 300%;
-          height: 300%;
-          -webkit-transform: scale(0.33333);
-          transform: scale(0.33333); } }
-    section .input-div input {
-      border: 0; }
-    section .input-div span {
-      line-height: .44rem;
-      color: #3f3f3f; }
-  section .forget {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end; }
-  section .login-btn {
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    flex-direction: column; }
-    section .login-btn a {
-      width: 35%;
-      background-color: #FF7220;
-      color: #fff;
-      line-height: .4rem;
-      text-align: center;
-      font-size: .16rem;
-      border-radius: .2rem; }
-    section .login-btn p {
-      padding: .2rem;
-      color: #c7c7c7; }
+h1 {
+  width: 1rem;
+  height: .45rem;
+  background: url(./images/login/logo.png);
+}

@@ -84,7 +84,7 @@
 /* 3 */
 /***/ (function(module, exports) {
 
-	module.exports = "<header>	<h1></h1>	<a href=\"javascript:;\">注册</a></header>"
+	module.exports = "<header>	<h1><a href=\"###\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"###\" class=\"index-login\">登录</a>	<a href=\"###\" class=\"index-reg\">注册</a>	<a href=\"###\" class=\"index-refresh\"></a></header>"
 
 /***/ }),
 /* 4 */

@@ -36,25 +36,15 @@ section{
         margin:20px 0 ;
         input{
             border: 0;
-            width:68%;
         }
         span{
             line-height: .44rem;
             color: #3f3f3f;
         }
-        position:relative;
-        justify-content: space-between;
-        @include flexbox();
     }
     .forget{
         @include flexbox();
         @include justify-content(flex-end);
-    }
-    .phone{
-        justify-content: flex-start;
-        input{
-            margin-left:0.05rem;
-        }
     }
     .login-btn{
          width:100%;
@@ -76,4 +66,3 @@ section{
          }
     }
 }
-
