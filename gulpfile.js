@@ -2,7 +2,7 @@
 var gulp = require('gulp')
 //引入gulp-webserver包
 var webserver = require('gulp-webserver')
-var proxy = require('http-proxy-middleware')
+//var proxy = require('http-proxy-middleware')
 
 // 引入 gulp-webpack包
 var webpack = require('gulp-webpack')
@@ -45,24 +45,25 @@ gulp.task('webserver',function(){
 					enable:true,//是否生效
 					path:'./build'
 				},
-				livereload: true,
-		        middleware: [
-		          // 反向代理
-		          proxy('/mock', {
-		            target: 'http://localhost:3000/',
-		            changeOrigin: true,
-		            pathRewrite: {
-		              '^/mock': ''
-		            }
-		          }),
-		          proxy('/api', {
-		            target: 'https://m.lagou.com/',
-		            changeOrigin: true,
-		            pathRewrite: {
-		              '^/api': ''
-		            }
-		          })
-		        ]
+				livereload: true
+//				,
+//		        middleware: [
+//		          // 反向代理
+//		          proxy('/mock', {
+//		            target: 'http://localhost:3000/',
+//		            changeOrigin: true,
+//		            pathRewrite: {
+//		              '^/mock': ''
+//		            }
+//		          }),
+//		          proxy('/api', {
+//		            target: 'https://m.lagou.com/',
+//		            changeOrigin: true,
+//		            pathRewrite: {
+//		              '^/api': ''
+//		            }
+//		          })
+//		        ]
 			})
 		)
 })
