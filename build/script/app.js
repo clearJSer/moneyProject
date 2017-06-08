@@ -76,9 +76,9 @@
 	commonUtil.render(document.getElementById('header'), headerTpl)
 	commonUtil.render(document.getElementById('footer'), footerTpl)
 
-	var mySwiper = new Swiper('.swiper-container', {
+	var mySwiper = new Swiper('#swiper-container-main', {
 		loop: true,
-		autoplay : 1000,
+		autoplay : 2000,
 		speed:300,
 		// 如果需要分页器
 		pagination: '.swiper-pagination',
@@ -86,6 +86,12 @@
 		// 如果需要前进后退按钮
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev'
+	})
+	var mySwiper = new Swiper('#swiper-container-adv', {
+		direction : 'vertical',
+		loop: true,
+		autoplay : 2000,
+		speed:300,
 	})
 
 
@@ -105,7 +111,7 @@
 /* 5 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"m-index\">	<div id=\"header\"></div>	<section>		<div class=\"index-banner\">			<div class=\"swiper-container\">			    <div class=\"swiper-wrapper\">			        <div class=\"swiper-slide\">Slide 1</div>			        <div class=\"swiper-slide\">Slide 2</div>			    </div>			    <!-- 如果需要分页器 -->			    <div class=\"swiper-pagination\"></div>			    			    <!-- 如果需要导航按钮 -->			    <div class=\"swiper-button-prev\"></div>			    <div class=\"swiper-button-next\"></div>			</div>		</div>		<div class=\"index-adv\">			<span class=\"yo-ico\">&#xe625;</span>		</div>		<div class=\"index-content\">			<div class=\"detail_content\">				<ul>					<li>						<dl>							<dt><img src=\"./images/img-index/detail-1.png\" /></dt>							<dd>立即充值</dd>						</dl>					</li>					<li>						<dl>							<dt><img src=\"images/img-index/detail-2.png\" /></dt>							<dd>邀请好友</dd>						</dl>					</li>					<li>						<dl>							<dt><img src=\"images/img-index/detail-3.png\" /></dt>							<dd>关于我们</dd>						</dl>					</li>				</ul>			</div>		</div>	</section>	<div id=\"footer\"></div></div>"
+	module.exports = "<div class=\"m-index\">	<div id=\"header\"></div>	<section>		<div class=\"index-banner\">			<div class=\"swiper-container\" id=\"swiper-container-main\">			    <div class=\"swiper-wrapper\">			        <div class=\"swiper-slide\"><a href=\"###\"><img src=\"./images/img-index/banner-1.png\" /></a></div>			        <div class=\"swiper-slide\"><a href=\"###\"><img src=\"./images/img-index/banner-2.png\" /></a></div>			    </div>			    <!-- 如果需要分页器 -->			    <div class=\"swiper-pagination\"></div>			    			    <!-- 如果需要导航按钮 -->			    <div class=\"swiper-button-prev\"></div>			    <div class=\"swiper-button-next\"></div>			</div>		</div>		<div class=\"index-adv\">			<span class=\"yo-ico\">&#xe625;</span>			<div class=\"adv\">				<div class=\"swiper-container\" id=\"swiper-container-adv\">				    <div class=\"swiper-wrapper\">				        <div class=\"swiper-slide\"><a href=\"###\">【重磅】东宏金融与恒丰银行正式签署资金存管协议</a></div>				        <div class=\"swiper-slide\"><a href=\"###\">【新手活动】新人专享210元现金红包+专享12%高息！</a></div>				        <div class=\"swiper-slide\"><a href=\"###\">新标“贸易供应链D3CD003-3”上线</a></div>				        <div class=\"swiper-slide\"><a href=\"###\">新标“贸易供应链D3CD003-1（一期）”上线</a></div>				    </div>				</div>			</div>		</div>		<div class=\"index-content\">			<div class=\"detail_content\">				<ul>					<li>						<dl>							<dt><img src=\"./images/img-index/detail-1.png\" /></dt>							<dd>立即充值</dd>						</dl>					</li>					<li>						<dl>							<dt><img src=\"images/img-index/detail-2.png\" /></dt>							<dd>邀请好友</dd>						</dl>					</li>					<li>						<dl>							<dt><img src=\"images/img-index/detail-3.png\" /></dt>							<dd>关于我们</dd>						</dl>					</li>				</ul>			</div>		</div>	</section>	<div id=\"footer\"></div></div>"
 
 /***/ }),
 /* 6 */

@@ -10,13 +10,14 @@
         .index-banner{
             width: 100%;
             height: 4rem;
-            .swiper-container {
+            #swiper-container-main {
                 width: 100%;
                 height: 4rem;
-                .swiper-pagination{
-                    bottom: 8%;
-    left: 0;
-    width: 100%;
+                a{
+                    img{
+                        width: 100%;
+                        height: 4rem;
+                    }
                 }
             }
         }
@@ -30,6 +31,18 @@
             span{
                 font-size: 0.42rem;
                 color: #4577DC;
+            }
+            .adv{
+                width: 6.666667rem;
+                height: 0.933333rem;
+                overflow: hidden;
+                #swiper-container-adv{
+                    height: 0.933333rem;
+                    a{
+                        line-height: 0.933333rem;
+                        color: #9d9d9d;
+                    }
+                }
             }
         }
         .index-content{

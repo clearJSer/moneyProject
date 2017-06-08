@@ -761,13 +761,12 @@ a {
     .m-index section .index-banner {
       width: 100%;
       height: 4rem; }
-      .m-index section .index-banner .swiper-container {
+      .m-index section .index-banner #swiper-container-main {
         width: 100%;
         height: 4rem; }
-        .m-index section .index-banner .swiper-container .swiper-pagination {
-          bottom: 8%;
-          left: 0;
-          width: 100%; }
+        .m-index section .index-banner #swiper-container-main a img {
+          width: 100%;
+          height: 4rem; }
     .m-index section .index-adv {
       width: 100%;
       height: 0.933333rem;
@@ -782,6 +781,15 @@ a {
       .m-index section .index-adv span {
         font-size: 0.42rem;
         color: #4577DC; }
+      .m-index section .index-adv .adv {
+        width: 6.666667rem;
+        height: 0.933333rem;
+        overflow: hidden; }
+        .m-index section .index-adv .adv #swiper-container-adv {
+          height: 0.933333rem; }
+          .m-index section .index-adv .adv #swiper-container-adv a {
+            line-height: 0.933333rem;
+            color: #9d9d9d; }
     .m-index section .index-content {
       width: 100%; }
       .m-index section .index-content .detail_content {
