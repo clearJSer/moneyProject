@@ -1,0 +1,68 @@
+@charset "UTF-8";
+body{
+    background-color: #fff;
+}
+#header{
+    height: .48rem;
+    background-color: rgb(69, 119, 220);
+    width:100%;
+    padding:0 .1rem;
+    header{
+        h1{
+            width: 1.05rem;
+            height: .45rem;
+            background:url(../images/login/logo.png) no-repeat 0 -.01rem;
+        }
+        @include flexbox();
+        @include align-items(center);
+        justify-content: space-between;
+        a{
+            color: #fff;
+            font-size: .16rem;
+        }
+    }
+}
+section{
+    padding:.2rem ;
+    .img-div{
+        @include flexbox();
+        @include justify-content();
+    }
+    .input-div{
+        width:100%;
+        height: .44rem;
+        padding: 0 .1rem;
+        @include border(1px,#b7b7b7);
+        margin:20px 0 ;
+        input{
+            border: 0;
+        }
+        span{
+            line-height: .44rem;
+            color: #3f3f3f;
+        }
+    }
+    .forget{
+        @include flexbox();
+        @include justify-content(flex-end);
+    }
+    .login-btn{
+         width:100%;
+         @include flexbox();
+         @include align-items();
+         @include flex-direction(column);
+         a{
+             width:35%;
+             background-color:#FF7220;
+             color:#fff;
+             line-height: .4rem;
+             text-align: center;
+             font-size: .16rem;
+             border-radius: .2rem;
+         }
+         p{
+             padding:.2rem;
+             color:#c7c7c7;
+         }
+    }
+}

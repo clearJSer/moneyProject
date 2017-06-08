@@ -2,6 +2,7 @@
 var gulp = require('gulp')
 //引入gulp-webserver包
 var webserver = require('gulp-webserver')
+var proxy = require('http-proxy-middleware')
 
 // 引入 gulp-webpack包
 var webpack = require('gulp-webpack')
@@ -44,7 +45,24 @@ gulp.task('webserver',function(){
 					enable:true,//是否生效
 					path:'./build'
 				},
-				livereload: true
+				livereload: true,
+		        middleware: [
+		          // 反向代理
+		          proxy('/mock', {
+		            target: 'http://localhost:3000/',
+		            changeOrigin: true,
+		            pathRewrite: {
+		              '^/mock': ''
+		            }
+		          }),
+		          proxy('/api', {
+		            target: 'https://m.lagou.com/',
+		            changeOrigin: true,
+		            pathRewrite: {
+		              '^/api': ''
+		            }
+		          })
+		        ]
 			})
 		)
 })
@@ -74,6 +92,7 @@ gulp.task('packjs',function(){
 		.pipe(gulp.dest('./build/script'))
 })
 
+
 //打包css
 gulp.task('packcss',function(){
 	gulp.src(['./src/style/usage/app-login.scss','./src/style/usage/app.scss','./src/style/lib/*.css'])
@@ -85,9 +104,9 @@ gulp.task('copyimage', function () {
   gulp.src('./src/images/**/*')
     .pipe(gulp.dest('./build/images'))
 })
-
 // copy libs
 gulp.task('copylibs', function () {
   gulp.src('./src/script/libs/*.*')
     .pipe(gulp.dest('./build/libs'))
 })
+
