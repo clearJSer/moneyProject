@@ -1,0 +1,21 @@
+@charset "UTF-8";
+#header{
+    height: .48rem;
+    background-color: rgb(69, 119, 220);
+    width:100%;
+    padding:0 .1rem;
+    header{
+        h1{
+            width: 1.05rem;
+            height: .45rem;
+            background:url(../images/login/logo.png) no-repeat 0 -.01rem;
+        }
+        @include flexbox();
+        @include align-items(center);
+        justify-content: space-between;
+        a{
+            color: #fff;
+            font-size: .16rem;
+        }
+    }
+}

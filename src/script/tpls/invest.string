@@ -1,25 +1,5 @@
-<div class="login-box">
-  <div id="header"></div>
-  <section>
-  		<div class="img-div">
-	   		<img src="./images/login/login-logo.png">
-  		</div>
-   		<div class="input-div phone">
-   			<span>手机号码:</span>
-   			<input type="txt" placeholder="请输入手机号码">
-   		</div>
-   		<div class="input-div">
-   			<span>登录密码:</span>
-   			<input type="password" placeholder="请输入密码">
-   			<span class="yo-ico eyes">&#xe633;</span>
-   		</div>
-   		<div class="forget">
-   		<a href="javascript:;">忘记密码</a>
-   		</div>
-   		<div class="login-btn">
-   			<a href="javascript:;">登录</a>
-   		  	<p>*市场有风险，投资需谨慎</p>
-   		</div>
-  </section>
+<div class="invest-box" id="invest-box">
+	<div id="header"></div>
+	<section>
 </div>
 

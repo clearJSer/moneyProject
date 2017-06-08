@@ -1,6 +1,8 @@
+var invest = require('../tpls/invest.string')
 var headerTpl = require('../tpls/header-login.string')
+var commonUtil = require('../utils/common')
 
-commonUtil.renderBody(login)
-commonUtil.render($('#header'), headerTpl)
+commonUtil.renderBody(invest);
+commonUtil.render(document.getElementById('header'), headerTpl)
 
-
+console.log($);

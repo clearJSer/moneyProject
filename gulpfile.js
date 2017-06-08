@@ -39,7 +39,7 @@ gulp.task('webserver',function(){
 	gulp.src('./build/')
 		.pipe(
 			webserver({
-				host:'localhost',
+				host:'10.9.166.9',
 				port:8000,
 				directoryListing:{//
 					enable:true,//是否生效
@@ -69,7 +69,7 @@ gulp.task('webserver',function(){
 
 //打包js
 gulp.task('packjs',function(){
-	gulp.src(['./src/script/app-login.js','./src/script/app.js'])
+	gulp.src(['./src/script/app-login.js','./src/script/app.js','./src/script/app-invest.js'])
 		.pipe(named())
 		.pipe(webpack({
 			output:{
@@ -95,7 +95,7 @@ gulp.task('packjs',function(){
 
 //打包css
 gulp.task('packcss',function(){
-	gulp.src(['./src/style/usage/app-login.scss','./src/style/usage/app.scss','./src/style/lib/*.css'])
+	gulp.src(['./src/style/usage/app-invest.scss','./src/style/usage/app-login.scss','./src/style/usage/app.scss','./src/style/lib/*.css'])
 		.pipe(sass().on('error',sass.logError))
 		.pipe(gulp.dest('./build/style'))
 })
