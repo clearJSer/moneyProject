@@ -24,4 +24,8 @@ var mySwiper = new Swiper('#swiper-container-adv', {
 	loop: true,
 	autoplay : 2000,
 	speed:300,
+	effect : 'fade',
+	fade: {
+	  crossFade: false,
+	}
 })

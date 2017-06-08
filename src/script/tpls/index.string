@@ -51,6 +51,56 @@
 					</li>
 				</ul>
 			</div>
+			<div class="water">
+				<div class="water-top">
+					<span class="yo-ico">&#xe629;</span>
+					<span>【新手专享标】贸易供应链</span>
+					<span>可投金额:500000</span>
+				</div>
+				<div class="water_content">
+					<ul>
+						<li>
+							<p>10<i>%</i></p>
+							<span>预期年化收益率</span>
+						</li>
+						<li>
+							<p>50万元</p>
+							<span>融资金额</span>
+						</li>
+						<li>
+							<p>30天</p>
+							<span>项目期限</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="water">
+				<div class="water-top">
+					<span class="yo-ico">&#xe629;</span>
+					<span>【新手专享标】贸易供应链</span>
+					<span>可投金额:500000</span>
+				</div>
+				<div class="water_content">
+					<ul>
+						<li>
+							<p>10<i>%</i></p>
+							<span>预期年化收益率</span>
+						</li>
+						<li>
+							<p>50万元</p>
+							<span>融资金额</span>
+						</li>
+						<li>
+							<p>30天</p>
+							<span>项目期限</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="more">
+				<a><p><span class="yo-ico">&#xe60a;</span>查看更多项目</p></a>
+			</div>
 		</div>
 	</section>
 	<div id="footer"></div>

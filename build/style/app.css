@@ -731,10 +731,10 @@ a {
       color: #fff;
       line-height: 1.25rem; }
     #header header > a:nth-child(2) {
-      margin-left: 2.8rem;
-      margin-right: 1rem; }
+      margin-left: 30%;
+      margin-right: 10%; }
     #header header > a:nth-child(3) {
-      margin-right: .4rem; }
+      margin-right: 5%; }
     #header header > a:last-child {
       font-size: .7rem;
       margin-top: -0.15rem; }
@@ -750,6 +750,7 @@ a {
   flex-direction: column; }
   .m-index section {
     width: 100% !important;
+    overflow-y: scroll;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
@@ -779,13 +780,18 @@ a {
         color: #4577DC; }
       .m-index section .index-adv .adv {
         width: 6.666667rem;
-        height: 0.933333rem;
-        overflow: hidden; }
+        height: 0.933333rem; }
         .m-index section .index-adv .adv #swiper-container-adv {
+          overflow: hidden;
+          width: 6.666667rem;
           height: 0.933333rem; }
           .m-index section .index-adv .adv #swiper-container-adv a {
             line-height: 0.933333rem;
-            color: #9d9d9d; }
+            color: #9d9d9d;
+            background: #f1f1f1;
+            white-space: nowrap;
+            padding-left: 0.3rem;
+            padding-right: 1rem; }
     .m-index section .index-content {
       width: 100%; }
       .m-index section .index-content .detail_content {
@@ -802,23 +808,115 @@ a {
           display: -webkit-flex;
           display: flex; }
           .m-index section .index-content .detail_content ul li {
+            height: 2rem;
             -webkit-box-flex: 1;
             -webkit-flex: 1;
             flex: 1;
             width: .1px;
             text-align: center; }
-            .m-index section .index-content .detail_content ul li dl dt img {
-              width: 30%;
-              height: 50%;
-              margin-top: 7%;
-              border-radius: 50%;
-              -webkit-background-clip: padding-box !important;
-              background-clip: padding-box !important; }
-            .m-index section .index-content .detail_content ul li dl dd {
-              color: #8f8f94;
-              height: 0.66rem;
-              font-size: 0.35rem;
-              line-height: 0.66rem; }
+            .m-index section .index-content .detail_content ul li dl {
+              width: 100%;
+              height: 100%; }
+              .m-index section .index-content .detail_content ul li dl dt {
+                width: 1.17rem;
+                height: 1.17rem;
+                margin: auto;
+                margin-top: 7%; }
+                .m-index section .index-content .detail_content ul li dl dt img {
+                  width: 1.17rem;
+                  height: 1.17rem;
+                  border-radius: 50%;
+                  -webkit-background-clip: padding-box !important;
+                  background-clip: padding-box !important; }
+              .m-index section .index-content .detail_content ul li dl dd {
+                color: #8f8f94;
+                height: 0.66rem;
+                font-size: 0.35rem;
+                line-height: 0.66rem; }
+      .m-index section .index-content .water {
+        width: 100%;
+        height: 4.3rem;
+        background: #fff;
+        margin-top: 0.1rem;
+        border-bottom: 0.1rem solid #F1F1F1;
+        position: relative; }
+        .m-index section .index-content .water .water-top {
+          height: 1.7rem;
+          line-height: 1rem; }
+          .m-index section .index-content .water .water-top span:first-child {
+            border-radius: 50%;
+            -webkit-background-clip: padding-box !important;
+            background-clip: padding-box !important;
+            display: inline-block;
+            width: 0.45rem;
+            height: 0.45rem;
+            font-size: 0.45rem;
+            line-height: 0.39rem;
+            color: #18A8E4;
+            margin: -0.1rem 0 0 0.4rem;
+            box-shadow: 0 0 .2rem #18A8E4; }
+          .m-index section .index-content .water .water-top span:nth-child(2) {
+            height: 1rem;
+            line-height: 1rem;
+            padding-left: .2rem;
+            position: absolute;
+            font-size: 0.4rem; }
+          .m-index section .index-content .water .water-top span:last-child {
+            color: #999;
+            font-size: 0.3rem;
+            position: absolute;
+            right: 10%; }
+        .m-index section .index-content .water .water_content {
+          width: 100%;
+          height: 1.6rem; }
+          .m-index section .index-content .water .water_content ul {
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex; }
+            .m-index section .index-content .water .water_content ul li {
+              color: #999;
+              text-align: center;
+              -webkit-box-flex: 1;
+              -webkit-flex: 1;
+              flex: 1;
+              width: .1px; }
+              .m-index section .index-content .water .water_content ul li p {
+                line-height: 0.89rem; }
+                .m-index section .index-content .water .water_content ul li p i {
+                  font-size: 0.5rem;
+                  font-weight: none; }
+              .m-index section .index-content .water .water_content ul li span {
+                line-height: 0.8rem;
+                font-size: 0.3rem; }
+            .m-index section .index-content .water .water_content ul li:first-child {
+              color: #DC6D09;
+              margin-left: .4rem; }
+              .m-index section .index-content .water .water_content ul li:first-child p {
+                line-height: 0.8rem;
+                font-size: .8rem;
+                font-weight: bold; }
+            .m-index section .index-content .water .water_content ul li:last-child {
+              margin-right: .4rem; }
+      .m-index section .index-content .more {
+        width: 100%;
+        background: #F5F5F5;
+        padding: 0.3rem 0; }
+        .m-index section .index-content .more p {
+          width: 3.3rem;
+          height: 0.6rem;
+          font-size: .24rem;
+          text-align: center;
+          color: #8f8f94;
+          line-height: 0.6rem;
+          border-radius: 3.3rem;
+          border: 1px solid #BFBFBF;
+          margin: 0 auto;
+          position: relative; }
+          .m-index section .index-content .more p span {
+            position: absolute;
+            left: 15%; }
 
 #footer {
   width: 100%;
