@@ -34,6 +34,7 @@ gulp.task('copyhtml',function(){
 		.pipe(gulp.dest('./build/'))
 })
 
+
 //启动一个webserver服务
 gulp.task('webserver',function(){
 	gulp.src('./build/')
