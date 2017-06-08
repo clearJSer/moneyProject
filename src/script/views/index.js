@@ -8,9 +8,9 @@ commonUtil.renderBody(indexTpl)
 commonUtil.render(document.getElementById('header'), headerTpl)
 commonUtil.render(document.getElementById('footer'), footerTpl)
 
-var mySwiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('#swiper-container-main', {
 	loop: true,
-	autoplay : 1000,
+	autoplay : 2000,
 	speed:300,
 	// 如果需要分页器
 	pagination: '.swiper-pagination',
@@ -18,4 +18,14 @@ var mySwiper = new Swiper('.swiper-container', {
 	// 如果需要前进后退按钮
 	nextButton: '.swiper-button-next',
 	prevButton: '.swiper-button-prev'
+})
+var mySwiper1 = new Swiper('#swiper-container-adv', {
+	direction : 'vertical',
+	loop: true,
+	autoplay : 2000,
+	speed:300,
+	effect : 'fade',
+	fade: {
+	  crossFade: false,
+	}
 })
