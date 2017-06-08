@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-var headerTpl = require('../tpls/header-login.string')
-=======
 var headerTpl = require('../tpls/header-index.string')
->>>>>>> qzh
 var footerTpl = require('../tpls/footer.string')
 var indexTpl = require('../tpls/index.string')
 
