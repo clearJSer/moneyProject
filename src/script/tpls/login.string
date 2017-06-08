@@ -11,7 +11,7 @@
    		<div class="input-div">
    			<span>登录密码:</span>
    			<input type="password" placeholder="请输入密码">
-   			<span class="yo-ico eyes">&#xe633;</span>
+   			<span class="yo-ico">&#xe633;</span>
    		</div>
    		<div class="forget">
    		<a href="javascript:;">忘记密码</a>
