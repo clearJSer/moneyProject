@@ -74,30 +74,12 @@ gulp.task('packjs',function(){
 		.pipe(gulp.dest('./build/script'))
 })
 
-<<<<<<< HEAD
-//打包css
-gulp.task('packcss',function(){
-	gulp.src(['./src/style/useage/app-login.scss','./src/style/usage/app.scss'])
-		.pipe(sass().on('error',sass.logError))
-		.pipe(gulp.dest('./build/style'))
-=======
-<<<<<<< HEAD
-// 打包 scss
-gulp.task('packcss', function () {
-gulp.src([
-    './src/style/usage/app.scss',
-    './src/style/usage/app-login.scss'
-])
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./build/style'))
-=======
+
 //打包css
 gulp.task('packcss',function(){
 	gulp.src(['./src/style/usage/app-login.scss','./src/style/usage/app.scss','./src/style/lib/*.css'])
 		.pipe(sass().on('error',sass.logError))
 		.pipe(gulp.dest('./build/style'))
->>>>>>> qzh
->>>>>>> 6e0eb2b8e9b46ba68f6df9f0e4078d5614b04eae
 })
 // copy images
 gulp.task('copyimage', function () {

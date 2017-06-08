@@ -709,6 +709,7 @@ a {
   vertical-align: middle; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 @font-face {
   font-family: 'yofont';
@@ -722,6 +723,8 @@ a {
   src: url("/images/iconfont/iconfont.woff") format("woff"), url("/images/iconfont/iconfont.ttf") format("truetype"); }
 
 >>>>>>> 6e0eb2b8e9b46ba68f6df9f0e4078d5614b04eae
+=======
+>>>>>>> liuliang-rd
 #header {
   height: 1.173333rem;
   background: #4577dc;

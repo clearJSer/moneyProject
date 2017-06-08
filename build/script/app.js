@@ -94,6 +94,7 @@
 /***/ (function(module, exports) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	module.exports = "<header>	<h1><a href=\"###\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"###\" class=\"index-login\">登录</a>	<a href=\"###\" class=\"index-reg\">注册</a>	<a href=\"###\" class=\"index-refresh\"></a></header>"
 =======
 <<<<<<< HEAD
@@ -102,6 +103,9 @@
 	module.exports = "<header>	<h1><a href=\"###\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"###\">登录</a>	<a href=\"###\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a></header>"
 >>>>>>> qzh
 >>>>>>> 6e0eb2b8e9b46ba68f6df9f0e4078d5614b04eae
+=======
+	module.exports = "<header>	<h1><a href=\"###\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"###\" class=\"index-login\">登录</a>	<a href=\"###\" class=\"index-reg\">注册</a>	<a href=\"###\" class=\"index-refresh\"></a></header>"
+>>>>>>> liuliang-rd
 
 /***/ }),
 /* 4 */
