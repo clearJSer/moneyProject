@@ -1,5 +1,19 @@
 <div class="invest-box" id="invest-box">
 	<div id="header"></div>
-	<section>
+	<section id="invest-section">
+		<ul class="month">
+			<li><p class="active">1-3个月</p></li>
+			<li><p>6个月</p></li>
+			<li><p>12个月</p></li>
+		</ul>
+		<ul  id="productList" >
+			<script id="investList" type="text/html">
+				<li></li>
+				
+			</script>
+		</ul>
+		<!--使用artTemplate模板-->
+	</section>
+	<div id="footer"></div>
 </div>
 

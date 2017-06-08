@@ -44,7 +44,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(11);
+	module.exports = __webpack_require__(10);
 
 
 /***/ }),
@@ -79,9 +79,17 @@
 /* 8 */,
 /* 9 */,
 /* 10 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = "<header>	<h1></h1>	<a href=\"javascript:;\">注册</a></header>"
+	/*** IMPORTS FROM imports-loader ***/
+
+
+	__webpack_require__(11)
+
+
+
+
+
 
 /***/ }),
 /* 11 */
@@ -90,21 +98,7 @@
 	/*** IMPORTS FROM imports-loader ***/
 
 
-	__webpack_require__(12)
-
-
-
-
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/*** IMPORTS FROM imports-loader ***/
-
-
-	var headerTpl = __webpack_require__(10)
+	var headerTpl = __webpack_require__(12)
 	var login = __webpack_require__(13)
 	var commonUtil = __webpack_require__(6)
 
@@ -114,6 +108,12 @@
 
 	console.log($);
 
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+	module.exports = "<header>	<h1></h1>	<a href=\"javascript:;\">注册</a></header>"
 
 /***/ }),
 /* 13 */

@@ -87,7 +87,7 @@
 		nextButton: '.swiper-button-next',
 		prevButton: '.swiper-button-prev'
 	})
-	var mySwiper = new Swiper('#swiper-container-adv', {
+	var mySwiper1 = new Swiper('#swiper-container-adv', {
 		direction : 'vertical',
 		loop: true,
 		autoplay : 2000,

@@ -50,8 +50,18 @@
 /***/ }),
 /* 1 */,
 /* 2 */,
-/* 3 */,
-/* 4 */,
+/* 3 */
+/***/ (function(module, exports) {
+
+	module.exports = "<header>	<h1><a href=\"###\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"login.html\">登录</a>	<a href=\"###\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a></header>"
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+	module.exports = "<footer>	<ul>		<li>			<dl>				<dt class=\"yo-ico\">&#xe604;</dt>				<dd>首页</dd>			</dl>		</li>		<li>			<dl>				<dt class=\"yo-ico\">&#xe60b;</dt>				<dd>投资</dd>			</dl>		</li>		<li>			<dl>				<dt class=\"yo-ico\">&#xe601;</dt>				<dd>账户</dd>			</dl>		</li>		<li>			<dl>				<dt class=\"yo-ico\">&#xe627;</dt>				<dd>更多</dd>			</dl>		</li>	</ul></footer>"
+
+/***/ }),
 /* 5 */,
 /* 6 */
 /***/ (function(module, exports) {
@@ -96,13 +106,21 @@
 
 
 	var invest = __webpack_require__(9)
-	var headerTpl = __webpack_require__(10)
+	var headerTpl = __webpack_require__(3)
+	var footerTpl = __webpack_require__(4)
 	var commonUtil = __webpack_require__(6)
 
 	commonUtil.renderBody(invest);
 	commonUtil.render(document.getElementById('header'), headerTpl)
+	commonUtil.render(document.getElementById('footer'), footerTpl)
 
-	console.log($);
+	var html = template('investList',{value:"hello art-template"})
+	document.getElementById("productList").innerHTML = html;
+	$.ajax({	
+		url:'/mock/listmore',
+		success:function(res){
+		}
+	})
 
 
 
@@ -110,13 +128,7 @@
 /* 9 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"invest-box\" id=\"invest-box\">	<div id=\"header\"></div>	<section></div>"
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-	module.exports = "<header>	<h1></h1>	<a href=\"javascript:;\">注册</a></header>"
+	module.exports = "<div class=\"invest-box\" id=\"invest-box\">	<div id=\"header\"></div>	<section id=\"invest-section\">		<ul class=\"month\">			<li><p class=\"active\">1-3个月</p></li>			<li><p>6个月</p></li>			<li><p>12个月</p></li>		</ul>		<ul  id=\"productList\" >			<script id=\"investList\" type=\"text/html\">				<li></li>							</script>		</ul>		<!--使用artTemplate模板-->	</section>	<div id=\"footer\"></div></div>"
 
 /***/ })
 /******/ ]);
