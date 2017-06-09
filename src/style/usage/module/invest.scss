@@ -5,25 +5,25 @@
     height: 100%;
     @include flexbox();
     @include flex-direction(column);
+    .month{
+        @include flexbox();
+        li{
+            width:33%;
+            p{
+                height: 0.9rem;
+                text-align: center;
+                line-height: 0.9rem;
+                color: #343434;
+            }
+            .active{
+                @include border(0 0 2px 0,#007aff);
+                color:#007aff ;
+            }
+        }
+    }
     section{
         height: 100%;
         overflow-y: auto;
-        .month{
-            @include flexbox();
-            li{
-                width:33%;
-                p{
-                    height: 0.9rem;
-                    text-align: center;
-                    line-height: 0.9rem;
-                    color: #343434;
-                }
-                p.active{
-                    @include border(0 0 2px 0,#007aff);
-                    color:#007aff ;
-                }
-            }
-        }
         .productList{
             padding: 0 0.4rem;
             width:100%;

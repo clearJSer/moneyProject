@@ -114,17 +114,41 @@
 	commonUtil.render(document.getElementById('header'), headerTpl)
 	commonUtil.render(document.getElementById('footer'), footerTpl)
 
-	$.ajax({	
-	//	url:'/api/dhapi/services/project/getProjectList',
-	//	type:'post',
-		url: '/mock/listmore',
-		success:function(res){
-			console.log(res)
-			var html = template('investList',res)
-			console.log(html);
-			document.getElementById("productList").innerHTML = html;
-		}
+	var mySwiper = new Swiper('#swiper-container-main', {
+		loop: true,
+		//autoplay : 2000,
+		speed:300,
+		// 如果需要分页器
+	//	pagination: '.swiper-pagination',
+	//	paginationClickable :true,
+	//	// 如果需要前进后退按钮
+	//	nextButton: '.swiper-button-next',
+	//	prevButton: '.swiper-button-prev'
+		onSlideChangeEnd: function(swiper){
+			  var j=swiper.activeIndex;
+			  console.log($('.month li'))
+	          $('.month li p').removeClass('active').eq(j-1).addClass('active');
+		      $.ajax({	
+	//				url:'/api/dhapi/services/project/getProjectList',
+	//				type:'post',
+	//				data:{
+	//					from:2,
+	//					pageNo:1,
+	//					pageSize:6,
+	//					span:360
+	//				},
+					url: '/mock/listmore',
+					success:function(res){
+						console.log(res)
+						var html = template('investList',res)
+						//console.log(html);
+						document.getElementById("productList").innerHTML = html;
+					}
+			})
+		 }
 	})
+
+
 
 
 
@@ -132,7 +156,7 @@
 /* 9 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"invest-box\" id=\"invest-box\">	<div id=\"header\"></div>	<section id=\"invest-section\">		<ul class=\"month\">			<li><p class=\"active\">1-3个月</p></li>			<li><p>6个月</p></li>			<li><p>12个月</p></li>		</ul>		<ul  id=\"productList\"  class=\"productList\">			<script id=\"investList\" type=\"text/html\">				{{each data}}				<li>					<div class=\"info-box\">						<div class=\"listLeft\">							<h4>{{$value.name}}</h4>							<p>								<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>									<span><i>{{$value.amount}}</i><i>万元</i></span>									<span><i>{{$value.span}}</i><i>天</i></span>								</p>							<p>								<span><i class=\"active\">预期年化收益率</i></span>									<span>融资金额</span>									<span>还款期限</span>								</p>						</div>						<!--&#xe7bb; 还款中-->						<div class=\"listRight\">							<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>						</div>					</div>					<div class=\"progress-num\">						<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>					</div>					<div class=\"progress\">						<div class=\"progress-son\">													</div>					</div>				</li>				{{/each}}			</script>		</ul>		<!--使用artTemplate模板-->	</section>	<div id=\"footer\"></div></div>"
+	module.exports = "<div class=\"invest-box\" id=\"invest-box\">	<div id=\"header\"></div>	<section id=\"invest-section\">		<ul class=\"month\" id=\"month\">			<li><p class=\"active\">1-3个月</p></li>			<li><p>6个月</p></li>			<li><p>12个月</p></li>		</ul>		<div class=\"swiper-container\" id=\"swiper-container-main\">		  <div class=\"swiper-wrapper\">		    <div class=\"swiper-slide\">				<ul  id=\"productList\"  class=\"productList\">					<script id=\"investList\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		    </div>		    <div class=\"swiper-slide\">slider2</div>		    <div class=\"swiper-slide\">slider3</div>		  </div>		</div>		<!--使用artTemplate模板-->	</section>	<div id=\"footer\"></div></div>"
 
 /***/ })
 /******/ ]);

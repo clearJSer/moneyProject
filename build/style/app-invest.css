@@ -725,52 +725,52 @@ a {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   flex-direction: column; }
+  .invest-box .month {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
+    .invest-box .month li {
+      width: 33%; }
+      .invest-box .month li p {
+        height: 0.9rem;
+        text-align: center;
+        line-height: 0.9rem;
+        color: #343434; }
+      .invest-box .month li .active {
+        position: relative;
+        color: #007aff; }
+        .invest-box .month li .active::after {
+          pointer-events: none;
+          position: absolute;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          content: "\0020";
+          border-color: #007aff;
+          border-style: solid;
+          border-width: 0 0 2px 0;
+          -webkit-transform-origin: 0 0;
+          transform-origin: 0 0; }
+          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+            .invest-box .month li .active::after {
+              width: 100%;
+              height: 100%; } }
+          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+            .invest-box .month li .active::after {
+              width: 200%;
+              height: 200%;
+              -webkit-transform: scale(0.5);
+              transform: scale(0.5); } }
+          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+            .invest-box .month li .active::after {
+              width: 300%;
+              height: 300%;
+              -webkit-transform: scale(0.33333);
+              transform: scale(0.33333); } }
   .invest-box section {
     height: 100%;
     overflow-y: auto; }
-    .invest-box section .month {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex; }
-      .invest-box section .month li {
-        width: 33%; }
-        .invest-box section .month li p {
-          height: 0.9rem;
-          text-align: center;
-          line-height: 0.9rem;
-          color: #343434; }
-        .invest-box section .month li p.active {
-          position: relative;
-          color: #007aff; }
-          .invest-box section .month li p.active::after {
-            pointer-events: none;
-            position: absolute;
-            z-index: 999;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            content: "\0020";
-            border-color: #007aff;
-            border-style: solid;
-            border-width: 0 0 2px 0;
-            -webkit-transform-origin: 0 0;
-            transform-origin: 0 0; }
-            @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-              .invest-box section .month li p.active::after {
-                width: 100%;
-                height: 100%; } }
-            @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-              .invest-box section .month li p.active::after {
-                width: 200%;
-                height: 200%;
-                -webkit-transform: scale(0.5);
-                transform: scale(0.5); } }
-            @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-              .invest-box section .month li p.active::after {
-                width: 300%;
-                height: 300%;
-                -webkit-transform: scale(0.33333);
-                transform: scale(0.33333); } }
     .invest-box section .productList {
       padding: 0 0.4rem;
       width: 100%; }
