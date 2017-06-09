@@ -7,10 +7,14 @@ commonUtil.renderBody(invest);
 commonUtil.render(document.getElementById('header'), headerTpl)
 commonUtil.render(document.getElementById('footer'), footerTpl)
 
-var html = template('investList',{value:"hello art-template"})
-document.getElementById("productList").innerHTML = html;
 $.ajax({	
-	url:'/mock/listmore',
+//	url:'/api/dhapi/services/project/getProjectList',
+//	type:'post',
+	url: '/mock/listmore',
 	success:function(res){
+		console.log(res)
+		var html = template('investList',res)
+		console.log(html);
+		document.getElementById("productList").innerHTML = html;
 	}
 })

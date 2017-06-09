@@ -50,17 +50,24 @@ gulp.task('webserver',function(){
 		        middleware: [
 		          // 反向代理
 		          proxy('/mock', {
-		            target: 'http://localhost:3000/',
+		            target:'http://localhost:3000/',
 		            changeOrigin: true,
 		            pathRewrite: {
 		              '^/mock': ''
 		            }
 		          }),
 		          proxy('/api', {
-		            target: 'https://m.lagou.com/',
+		            target: 'http://www.dfhfax.com/',
 		            changeOrigin: true,
 		            pathRewrite: {
 		              '^/api': ''
+		            }
+		          }),
+		          proxy('/lagou', {
+		            target: 'https://m.lagou.com/',
+		            changeOrigin: true,
+		            pathRewrite: {
+		              '^/lagou': ''
 		            }
 		          })
 		        ]

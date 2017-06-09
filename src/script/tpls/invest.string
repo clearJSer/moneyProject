@@ -6,10 +6,39 @@
 			<li><p>6个月</p></li>
 			<li><p>12个月</p></li>
 		</ul>
-		<ul  id="productList" >
+		<ul  id="productList"  class="productList">
 			<script id="investList" type="text/html">
-				<li></li>
-				
+				{{each data}}
+				<li>
+					<div class="info-box">
+						<div class="listLeft">
+							<h4>{{$value.name}}</h4>
+							<p>
+								<span><i class="active percent">{{$value.rate}}</i><i class="active">%</i></span>	
+								<span><i>{{$value.amount}}</i><i>万元</i></span>	
+								<span><i>{{$value.span}}</i><i>天</i></span>	
+							</p>
+							<p>
+								<span><i class="active">预期年化收益率</i></span>	
+								<span>融资金额</span>	
+								<span>还款期限</span>	
+							</p>
+						</div>
+						<!--&#xe7bb; 还款中-->
+						<div class="listRight">
+							<a href="javascript:;" class="yo-ico ico-img">&#xe624;</a>
+						</div>
+					</div>
+					<div class="progress-num">
+						<span class="percent-num">{{$value.stepAmount}}</span><span>%</span>
+					</div>
+					<div class="progress">
+						<div class="progress-son">
+							
+						</div>
+					</div>
+				</li>
+				{{/each}}
 			</script>
 		</ul>
 		<!--使用artTemplate模板-->
