@@ -72,11 +72,11 @@ function getData(url,artTmp,box){
 			var html = template(artTmp,res)
 			//console.log(html);
 			document.getElementById(box).innerHTML = html;
+			
+			new IScroll(".isroll")
 		}
 	})
 }
-
-
 
 //				url:'/api/dhapi/services/project/getProjectList',
 //				type:'post',
@@ -86,3 +86,6 @@ function getData(url,artTmp,box){
 //					pageSize:6,
 //					span:360
 //				},
+
+//iscroll
+console.log(IScroll)

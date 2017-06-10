@@ -24,7 +24,8 @@
     }
     section{
         height: 100%;
-        overflow-y: auto;
+        overflow-y: scroll;
+        flex: 1;
         .productList{
             padding: 0 0.4rem;
             width:100%;

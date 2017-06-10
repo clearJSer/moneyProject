@@ -9,7 +9,8 @@
 		<div class="swiper-container" id="swiper-container-main">
 		  <div class="swiper-wrapper">
 		    <div class="swiper-slide">
-				<ul  id="productList"  class="productList">
+		    	<div class="isroll">
+					<ul  id="productList"  class="productList">
 					<script id="investList" type="text/html">
 						{{each data}}
 						<li>
@@ -44,6 +45,7 @@
 						{{/each}}
 					</script>
 				</ul>
+				</div>
 		    </div>
 		    <div class="swiper-slide">
 		    	<ul  id="productList2"  class="productList">
