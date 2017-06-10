@@ -14,7 +14,7 @@ var named = require('vinyl-named')
 var sass = require('gulp-sass')
 
 //定义默认任务
-gulp.task('default',['copyhtml','webserver','watch','copyimage'],function(){
+gulp.task('default',['copyhtml','webserver','watch','copyimage','packjs','packcss','copylibs'],function(){
 	
 })
 //检测文件变化
@@ -25,6 +25,7 @@ gulp.task('watch',function(){
 	gulp.watch('./src/script/**/*.string', ['packjs'])
   	gulp.watch('./src/images/**/*', ['copyimage'])
   	gulp.watch('./src/libs/**/*', ['copylibs'])
+  	//gulp.watch('./src/mock/**/*', ['copymock'])
 })
 
 
@@ -117,4 +118,9 @@ gulp.task('copylibs', function () {
   gulp.src('./src/script/libs/*.*')
     .pipe(gulp.dest('./build/libs'))
 })
+//copy mock
+//gulp.task('copymock',function(){
+//	gulp.src('./src/script/mock/*.*')
+//	.pipe(gulp.dest('./buil/mock'))
+//})
 
