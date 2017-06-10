@@ -11,6 +11,7 @@ var mySwiper = new Swiper('#swiper-container-main', {
 	//loop: true,
 	//autoplay : 2000,
 	speed:300,
+	//touchMoveStopPropagation : false,
 	// 如果需要分页器
 	onSlideChangeEnd: function(swiper){
 		  var j=swiper.realIndex;
@@ -20,10 +21,10 @@ var mySwiper = new Swiper('#swiper-container-main', {
 	      	  getData('/mock/listmore','investList','productList');
 	      	   break;
 	      	case 1 : 
-	      	    getData('/mock/listmore2','investList2','productList2');
+	      	    getData('/mock/listmore2','investList2','productList2',"#isroll-2");
 	      	   break;
 	      	case 2 :
-	      	   getData('/mock/listmore3','investList3','productList3');
+	      	   getData('/mock/listmore3','investList3','productList3',"#isroll-3");
 	      	   break;
 	      }
 	 }
@@ -45,6 +46,7 @@ $('#month li').tap(function(){
 	  }
 	mySwiper.slideTo(index,1000,false);
 })
+//页面初始化数据
 $.ajax({	
 //	url:'/api/dhapi/services/project/getProjectList',
 //	type:'post',
@@ -59,21 +61,22 @@ $.ajax({
 		var html = template('investList',res)
 		//console.log(html);
 		document.getElementById("productList").innerHTML = html;
+		var isroll1 = new IScroll("#isroll-1");
 	}
 })
 
 //getData('/mock/listmore',"investList",'productList')
 
 //获取数据方法
-function getData(url,artTmp,box){
+function getData(url,artTmp,box,isroll){
 	$.ajax({	
 		url:url,
 		success:function(res){
 			var html = template(artTmp,res)
 			//console.log(html);
 			document.getElementById(box).innerHTML = html;
-			
-			new IScroll(".isroll")
+			var isroll1 = new IScroll(isroll);
+			//new IScroll(".isroll");
 		}
 	})
 }

@@ -6,10 +6,11 @@
 			<li><p>6个月</p></li>
 			<li><p>12个月</p></li>
 		</ul>
-		<div class="swiper-container" id="swiper-container-main">
+		<div class="swiperbox">
+			<div class="swiper-container" id="swiper-container-main">
 		  <div class="swiper-wrapper">
 		    <div class="swiper-slide">
-		    	<div class="isroll">
+		    	<div class="isroll" id="isroll-1">
 					<ul  id="productList"  class="productList">
 					<script id="investList" type="text/html">
 						{{each data}}
@@ -48,6 +49,7 @@
 				</div>
 		    </div>
 		    <div class="swiper-slide">
+		    	<div id="isroll-2" class="isroll">
 		    	<ul  id="productList2"  class="productList">
 					<script id="investList2" type="text/html">
 						{{each data}}
@@ -83,8 +85,10 @@
 						{{/each}}
 					</script>
 				</ul>
+		    	</div>
 		    </div>
 		    <div class="swiper-slide">
+		    	<div id="isroll-3" class="isroll">
 		    	<ul  id="productList3"  class="productList">
 					<script id="investList3" type="text/html">
 						{{each data}}
@@ -120,9 +124,12 @@
 						{{/each}}
 					</script>
 				</ul>
+		   		</div>
 		    </div>
 		  </div>
 		</div>
+		</div>
+		
 		<!--使用artTemplate模板-->
 	</section>
 	<div id="footer"></div>

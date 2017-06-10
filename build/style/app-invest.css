@@ -810,7 +810,7 @@ html {
               transform: scale(0.33333); } }
   .invest-box section {
     height: 100%;
-    overflow-y: scroll;
+    overflow: hidden;
     flex: 1; }
     .invest-box section .productList {
       padding: 0 0.4rem;
@@ -860,6 +860,17 @@ html {
           border-radius: .1rem;
           height: .1rem;
           background-color: #DC6D09; }
+
+.isroll {
+  overflow: hidden;
+  height: 100%; }
+
+.swiperbox {
+  height: 100%;
+  overflow: hidden; }
+
+.swiper-container {
+  height: 100%; }
 
 #header {
   height: 1.173333rem;

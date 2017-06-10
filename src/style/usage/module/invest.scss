@@ -30,7 +30,7 @@ html{
     }
     section{
         height: 100%;
-        overflow-y: scroll;
+        overflow: hidden;
         flex: 1;
         .productList{
             padding: 0 0.4rem;
@@ -96,4 +96,15 @@ html{
             }
         }
     }
+}
+.isroll{
+    overflow: hidden;
+    height: 100%;
+}
+.swiperbox{
+    height: 100%;
+    overflow: hidden;
+}
+.swiper-container{
+    height: 100%;
 }
