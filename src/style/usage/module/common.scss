@@ -7,3 +7,8 @@ src: url('/images/iconfont/iconfont-ll.woff') format('woff'), url('/images/iconf
   src: url('/images/iconfont/iconfont.woff') format('woff'),
        url('/images/iconfont/iconfont.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'yofont';
+  src: url('/images/iconfont/iconfont-more.woff') format('woff'),
+       url('/images/iconfont/iconfont-more.ttf') format('truetype');
+}

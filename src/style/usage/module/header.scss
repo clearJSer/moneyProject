@@ -3,31 +3,34 @@
     background: #4577dc;
     padding: 0 0.4rem;
     overflow: hidden;
+    position: relative;
     header{
         @include flexbox();
         @include align-items(center);
         h1{
             a{
                 img{
-                    margin-top: -0.14rem;
+                    margin-top: -1%;
                     width: 2.8rem;
                 }
             }
         }
         >a{
             color: #fff;
-            line-height: 1.25rem;
+            position: absolute;
+            top: 29%;
         }
         >a:nth-child(2){
-            margin-left: 30%;
-            margin-right: 10%;
+            right: 34%;
         }
         >a:nth-child(3){
-            margin-right: 5%;
+            right: 15%;
         }
         >a:last-child{
             font-size: .7rem;
             margin-top: -0.15rem;
+            top: 17%;
+            right: 3%;
         }
     }
 }

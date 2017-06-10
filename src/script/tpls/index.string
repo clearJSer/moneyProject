@@ -51,57 +51,54 @@
 					</li>
 				</ul>
 			</div>
-			<div class="water">
-				<div class="water-top">
-					<span class="yo-ico">&#xe629;</span>
-					<span>【新手专享标】贸易供应链</span>
-					<span>可投金额:500000</span>
-				</div>
-				<div class="water_content">
-					<ul>
-						<li>
-							<p>10<i>%</i></p>
-							<span>预期年化收益率</span>
-						</li>
-						<li>
-							<p>50万元</p>
-							<span>融资金额</span>
-						</li>
-						<li>
-							<p>30天</p>
-							<span>项目期限</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="water">
-				<div class="water-top">
-					<span class="yo-ico">&#xe629;</span>
-					<span>【新手专享标】贸易供应链</span>
-					<span>可投金额:500000</span>
-				</div>
-				<div class="water_content">
-					<ul>
-						<li>
-							<p>10<i>%</i></p>
-							<span>预期年化收益率</span>
-						</li>
-						<li>
-							<p>50万元</p>
-							<span>融资金额</span>
-						</li>
-						<li>
-							<p>30天</p>
-							<span>项目期限</span>
-						</li>
-					</ul>
-				</div>
+			<div class="water-box">
+				<script id="indexList" type="text/html">
+					{{each data}}
+					<div class="water">
+						<div class="water-top">
+							<span class="yo-ico">&#xe629;</span>
+							<span>{{$value.name}}</span>
+							<span>可投金额:{{$value.balanceamount}}</span>
+						</div>
+						<div class="water_content">
+							<ul>
+								<li>
+									<div class="fl">
+										<h3 class="font_size66">
+											{{$value.rate}}<em class="font_size36">%</em>
+										</h3>
+										<p>预期年化收益率</p>
+									</div>
+								</li>
+								<li>
+									<p>
+										<span class="yo-ico">&#xe701;</span>
+										<span class="day_1">{{$value.span}}天</span>
+									</p>
+									<p>
+										<span class="yo-ico">&#xe61d;</span>
+										<span>起投</span>
+										<span class="minAmount_1">{{$value.stepAmount}}元</span>
+									</p>
+								</li>
+								<li>
+									<div class="now_tz_1">
+										<a class="btn_1" href="###">立即投资</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					{{/each}}
+				</script>
 			</div>
 			
 			<div class="more">
-				<a><p><span class="yo-ico">&#xe60a;</span>查看更多项目</p></a>
+				<a href="###"><p><span class="yo-ico">&#xe60a;</span>查看更多</p></a>
 			</div>
 		</div>
 	</section>
 	<div id="footer"></div>
 </div>
+
+

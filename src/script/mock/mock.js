@@ -1,6 +1,6 @@
-var listmore = require('./listmore.json')
+var getProjectList = require('./getProjectList.json')
 module.exports = function () {
   return {
-    listmore: listmore
+    getProjectList: getProjectList
   }
 }

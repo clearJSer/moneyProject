@@ -1,6 +1,6 @@
 <header>
-	<h1><a href="###"><img src="./images/img-index/logo1.png" /></a></h1>
-	<a href="###">登录</a>
-	<a href="###">注册</a>
+	<h1><a href="index.html"><img src="./images/img-index/logo1.png" /></a></h1>
+	<a href="login.html">登录</a>
+	<a href="invest.html">注册</a>
 	<a href="###" class="yo-ico">&#xe600;</a>
 </header>

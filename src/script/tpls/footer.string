@@ -1,28 +1,36 @@
 <footer>
 	<ul>
 		<li>
-			<dl>
-				<dt class="yo-ico">&#xe604;</dt>
-				<dd>首页</dd>
-			</dl>
+			<a href="index.html">
+				<dl>
+					<dt class="yo-ico">&#xe604;</dt>
+					<dd>首页</dd>
+				</dl>
+			</a>
 		</li>
 		<li>
-			<dl>
-				<dt class="yo-ico">&#xe60b;</dt>
-				<dd>投资</dd>
-			</dl>
+			<a href="###">
+				<dl>
+					<dt class="yo-ico">&#xe60b;</dt>
+					<dd>投资</dd>
+				</dl>
+			</a>
 		</li>
 		<li>
-			<dl>
-				<dt class="yo-ico">&#xe601;</dt>
-				<dd>账户</dd>
-			</dl>
+			<a href="###">
+				<dl>
+					<dt class="yo-ico">&#xe601;</dt>
+					<dd>账户</dd>
+				</dl>
+			</a>
 		</li>
 		<li>
-			<dl>
-				<dt class="yo-ico">&#xe627;</dt>
-				<dd>更多</dd>
-			</dl>
+			<a href="more.html">
+				<dl>
+					<dt class="yo-ico">&#xe627;</dt>
+					<dd>更多</dd>
+				</dl>
+			</a>
 		</li>
 	</ul>
 </footer>
