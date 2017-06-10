@@ -14,8 +14,8 @@ var named = require('vinyl-named')
 var sass = require('gulp-sass')
 
 //定义默认任务
-gulp.task('default', ['copyhtml', 'webserver', 'watch', 'copyimage'], function() {
-
+gulp.task('default',['copyhtml','webserver','watch','copyimage','packjs','packcss','copylibs'],function(){
+	
 })
 //检测文件变化
 gulp.task('watch', function() {
@@ -33,6 +33,7 @@ gulp.task('copyhtml', function() {
 		.pipe(gulp.dest('./build/'))
 })
 
+
 //启动一个webserver服务
 gulp.task('webserver', function() {
 	gulp.src('./build/')
@@ -45,30 +46,37 @@ gulp.task('webserver', function() {
 					path: './build'
 				},
 				livereload: true,
-				middleware: [
-					// 反向代理
-					proxy('/mock', {
-						target: 'http://localhost:3000/',
-						changeOrigin: true,
-						pathRewrite: {
-							'^/mock': ''
-						}
-					}),
-					proxy('/api', {
-						target: 'http://www.dfhfax.com/',
-						changeOrigin: true,
-						pathRewrite: {
-							'^/api': ''
-						}
-					})
-				]
+		        middleware: [
+		          // 反向代理
+		          proxy('/mock', {
+		            target:'http://localhost:3000/',
+		            changeOrigin: true,
+		            pathRewrite: {
+		              '^/mock': ''
+		            }
+		          }),
+		          proxy('/api', {
+		            target: 'http://www.dfhfax.com/',
+		            changeOrigin: true,
+		            pathRewrite: {
+		              '^/api': ''
+		            }
+		          }),
+		          proxy('/lagou', {
+		            target: 'https://m.lagou.com/',
+		            changeOrigin: true,
+		            pathRewrite: {
+		              '^/lagou': ''
+		            }
+		          })
+		        ]
 			})
 		)
 })
 
 //打包js
-gulp.task('packjs', function() {
-	gulp.src(['./src/script/app-login.js', './src/script/app.js', './src/script/app-more.js'])
+gulp.task('packjs',function(){
+	gulp.src(['./src/script/app-login.js', './src/script/app.js', './src/script/app-invest.js', './src/script/app-more.js'])
 		.pipe(named())
 		.pipe(webpack({
 			output: {
@@ -95,7 +103,9 @@ gulp.task('packcss', function() {
 	gulp.src(['./src/style/usage/app-login.scss',
 		'./src/style/usage/app-more.scss',
 		'./src/style/usage/app.scss',
-		'./src/style/lib/*.css'])
+		'./src/style/lib/*.css',
+		'./src/style/usage/app-invest.scss'
+	])
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./build/style'))
 })
