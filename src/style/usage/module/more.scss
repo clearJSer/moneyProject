@@ -1,0 +1,84 @@
+@charset "UTF-8";
+html{
+    font-size: 10vw;
+    body{
+        font-size: .5625rem;
+        background: #F5F5F5;
+    }
+}
+.m-more{
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    section{
+        width: 100% !important;
+        background: #fff;
+        @include flex();
+        .mui-content{
+            padding-bottom: 1.4rem;
+            .more_wrap{
+                .mui-table-view{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding-left: 0;
+                    .mui-table-view-cell{
+                        position: relative;
+                        padding: 0.146667rem 0.2rem;
+                        border-bottom: 1px solid #c8c7cc;
+                        .more_icon{
+                            font-size: 0.48rem;
+                            margin-left: 0.3rem;
+                        }
+                        .mui-navigate-right{
+                            font-size: 0.4rem;
+                            display: inline-block;
+                            width: 90%;
+                            color: #3f3f3f
+                        }
+                        .more_icon-right{
+                            font-size: 0.4rem;
+                            color: #A1A1A2;
+                            font-weight: bold;
+                            position: absolute;
+                            right: 3%;
+                            top: 20%;
+                        }
+                    }
+                }
+                .more_bar_01{
+                    background: #efefef;
+                    height: 0.4rem;
+                    width: 100%;
+                }
+            }
+            .tip_msg_p{
+                font-size: .3rem;
+                color: #c7c7c7;
+                text-align: center;
+                line-height: 0.8rem;
+                overflow: hidden;
+            }
+        }
+    }
+    
+    #header{
+        a:nth-child(2){
+            display: none;
+        }
+        a:nth-child(3){
+            display: none;
+        }
+    }
+    #footer{
+        font-size: .375rem;
+        ul{
+            li:last-child{
+                dd:nth-child(2){
+                    color: #d2a47f !important;
+                }
+            }
+        }
+    }
+    
+}
+

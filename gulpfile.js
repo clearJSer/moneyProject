@@ -18,34 +18,32 @@ gulp.task('default',['copyhtml','webserver','watch','copyimage','packjs','packcs
 	
 })
 //检测文件变化
-gulp.task('watch',function(){
-	gulp.watch('./src/*.html',['copyhtml'])
+gulp.task('watch', function() {
+	gulp.watch('./src/*.html', ['copyhtml'])
 	gulp.watch('./src/script/**/*.js', ['packjs'])
-	gulp.watch('./src/style/**/*.scss',['packcss'])
+	gulp.watch('./src/style/**/*.scss', ['packcss'])
 	gulp.watch('./src/script/**/*.string', ['packjs'])
-  	gulp.watch('./src/images/**/*', ['copyimage'])
-  	gulp.watch('./src/libs/**/*', ['copylibs'])
-  	//gulp.watch('./src/mock/**/*', ['copymock'])
+	gulp.watch('./src/images/**/*', ['copyimage'])
+	gulp.watch('./src/libs/**/*', ['copylibs'])
 })
 
-
 //把src的HTML文件拷贝到build
-gulp.task('copyhtml',function(){
+gulp.task('copyhtml', function() {
 	gulp.src('./src/*.html')
 		.pipe(gulp.dest('./build/'))
 })
 
 
 //启动一个webserver服务
-gulp.task('webserver',function(){
+gulp.task('webserver', function() {
 	gulp.src('./build/')
 		.pipe(
 			webserver({
-				host:'localhost',
-				port:8000,
-				directoryListing:{//
-					enable:true,//是否生效
-					path:'./build'
+				host: 'localhost',
+				port: 8000,
+				directoryListing: { //
+					enable: true, //是否生效
+					path: './build'
 				},
 				livereload: true,
 		        middleware: [
@@ -78,49 +76,46 @@ gulp.task('webserver',function(){
 
 //打包js
 gulp.task('packjs',function(){
-	gulp.src(['./src/script/app-login.js','./src/script/app.js','./src/script/app-invest.js'])
+	gulp.src(['./src/script/app-login.js', './src/script/app.js', './src/script/app-invest.js', './src/script/app-more.js'])
 		.pipe(named())
 		.pipe(webpack({
-			output:{
-				filename:'[name].js'
+			output: {
+				filename: '[name].js'
 			},
-			module:{
-				loaders:[
-					{
-						test:/\.js$/,
-						loader:'imports-loader',
-						exclude:'./node_moudules'
+			module: {
+				loaders: [{
+						test: /\.js$/,
+						loader: 'imports-loader',
+						exclude: './node_moudules'
 					},
 					{
-			            test: /\.string$/,
-			            loader: 'string-loader'
-			        }
+						test: /\.string$/,
+						loader: 'string-loader'
+					}
 				]
 			}
 		}))
 		.pipe(gulp.dest('./build/script'))
 })
 
-
 //打包css
-gulp.task('packcss',function(){
-	gulp.src(['./src/style/usage/app-invest.scss','./src/style/usage/app-login.scss','./src/style/usage/app.scss','./src/style/lib/*.css'])
-		.pipe(sass().on('error',sass.logError))
+gulp.task('packcss', function() {
+	gulp.src(['./src/style/usage/app-login.scss',
+		'./src/style/usage/app-more.scss',
+		'./src/style/usage/app.scss',
+		'./src/style/lib/*.css',
+		'./src/style/usage/app-invest.scss'
+	])
+		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./build/style'))
 })
 // copy images
-gulp.task('copyimage', function () {
-  gulp.src('./src/images/**/*')
-    .pipe(gulp.dest('./build/images'))
+gulp.task('copyimage', function() {
+	gulp.src('./src/images/**/*')
+		.pipe(gulp.dest('./build/images'))
 })
 // copy libs
-gulp.task('copylibs', function () {
-  gulp.src('./src/script/libs/*.*')
-    .pipe(gulp.dest('./build/libs'))
+gulp.task('copylibs', function() {
+	gulp.src('./src/script/libs/*.*')
+		.pipe(gulp.dest('./build/libs'))
 })
-//copy mock
-//gulp.task('copymock',function(){
-//	gulp.src('./src/script/mock/*.*')
-//	.pipe(gulp.dest('./buil/mock'))
-//})
-

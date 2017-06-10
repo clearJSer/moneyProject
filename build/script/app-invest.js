@@ -53,13 +53,13 @@
 /* 3 */
 /***/ (function(module, exports) {
 
-	module.exports = "<header>	<h1><a href=\"###\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"login.html\">登录</a>	<a href=\"###\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a></header>"
+	module.exports = "<header>	<h1><a href=\"index.html\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"login.html\">登录</a>	<a href=\"invest.html\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a></header>"
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-	module.exports = "<footer>	<ul>		<li>			<dl>				<dt class=\"yo-ico\">&#xe604;</dt>				<dd>首页</dd>			</dl>		</li>		<li>			<dl>				<dt class=\"yo-ico\">&#xe60b;</dt>				<dd>投资</dd>			</dl>		</li>		<li>			<dl>				<dt class=\"yo-ico\">&#xe601;</dt>				<dd>账户</dd>			</dl>		</li>		<li>			<dl>				<dt class=\"yo-ico\">&#xe627;</dt>				<dd>更多</dd>			</dl>		</li>	</ul></footer>"
+	module.exports = "<footer>	<ul>		<li>			<a href=\"index.html\">				<dl>					<dt class=\"yo-ico\">&#xe604;</dt>					<dd>首页</dd>				</dl>			</a>		</li>		<li>			<a href=\"###\">				<dl>					<dt class=\"yo-ico\">&#xe60b;</dt>					<dd>投资</dd>				</dl>			</a>		</li>		<li>			<a href=\"###\">				<dl>					<dt class=\"yo-ico\">&#xe601;</dt>					<dd>账户</dd>				</dl>			</a>		</li>		<li>			<a href=\"more.html\">				<dl>					<dt class=\"yo-ico\">&#xe627;</dt>					<dd>更多</dd>				</dl>			</a>		</li>	</ul></footer>"
 
 /***/ }),
 /* 5 */,

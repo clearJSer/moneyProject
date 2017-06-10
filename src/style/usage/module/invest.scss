@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
-
+html{
+    font-size: 10vw;
+    body{
+        font-size: .375rem;
+        background: #F5F5F5;
+    }
+}
 .invest-box{
     height: 100%;
     @include flexbox();
