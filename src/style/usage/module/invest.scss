@@ -108,3 +108,25 @@ html{
 .swiper-container{
     height: 100%;
 }
+.foot {
+        text-align: center;
+        height: .4rem;
+        line-height: .4rem;
+        padding : .3rem 0;
+        @include border(1px,red)
+}
+.foot img {
+        width: .4rem;
+        display: inline-block;
+        /*transform: rotate(0deg);*/
+    /*-webkit-transform: rotate(0deg);*/
+    transition: transform 150ms;
+    -webkit-transition: transform 150ms;
+}
+.foot span{
+    font-size: .4rem;
+}
+.down {
+    transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+}

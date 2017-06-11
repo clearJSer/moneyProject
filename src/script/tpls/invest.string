@@ -12,40 +12,44 @@
 		    <div class="swiper-slide">
 		    	<div class="isroll" id="isroll-1">
 					<ul  id="productList"  class="productList">
-					<script id="investList" type="text/html">
-						{{each data}}
-						<li>
-							<div class="info-box">
-								<div class="listLeft">
-									<h4>{{$value.name}}</h4>
-									<p>
-										<span><i class="active percent">{{$value.rate}}</i><i class="active">%</i></span>	
-										<span><i>{{$value.amount}}</i><i>万元</i></span>	
-										<span><i>{{$value.span}}</i><i>天</i></span>	
-									</p>
-									<p>
-										<span><i class="active">预期年化收益率</i></span>	
-										<span>融资金额</span>	
-										<span>还款期限</span>	
-									</p>
+						<script id="investList" type="text/html">
+							{{each data}}
+							<li>
+								<div class="info-box">
+									<div class="listLeft">
+										<h4>{{$value.name}}</h4>
+										<p>
+											<span><i class="active percent">{{$value.rate}}</i><i class="active">%</i></span>	
+											<span><i>{{$value.amount}}</i><i>万元</i></span>	
+											<span><i>{{$value.span}}</i><i>天</i></span>	
+										</p>
+										<p>
+											<span><i class="active">预期年化收益率</i></span>	
+											<span>融资金额</span>	
+											<span>还款期限</span>	
+										</p>
+									</div>
+									<!--&#xe7bb; 还款中-->
+									<div class="listRight">
+										<a href="javascript:;" class="yo-ico ico-img">&#xe624;</a>
+									</div>
 								</div>
-								<!--&#xe7bb; 还款中-->
-								<div class="listRight">
-									<a href="javascript:;" class="yo-ico ico-img">&#xe624;</a>
+								<div class="progress-num">
+									<span class="percent-num">{{$value.stepAmount}}</span><span>%</span>
 								</div>
-							</div>
-							<div class="progress-num">
-								<span class="percent-num">{{$value.stepAmount}}</span><span>%</span>
-							</div>
-							<div class="progress">
-								<div class="progress-son">
-									
+								<div class="progress">
+									<div class="progress-son">
+										
+									</div>
 								</div>
-							</div>
-						</li>
-						{{/each}}
-					</script>
-				</ul>
+							</li>
+							{{/each}}
+							 <div class="foot">
+			                    <img src="./images/arrow.png"/>
+			                    <span>上拉加载更多...</span>
+				             <div>
+						</script>
+					</ul>
 				</div>
 		    </div>
 		    <div class="swiper-slide">
