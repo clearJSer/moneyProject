@@ -62,11 +62,11 @@ gulp.task('webserver', function() {
 		              '^/api': ''
 		            }
 		          }),
-		          proxy('/lagou', {
-		            target: 'https://m.lagou.com/',
+		          proxy('/cloud', {
+		            target: 'http://redlemon.applinzi.com/',
 		            changeOrigin: true,
 		            pathRewrite: {
-		              '^/lagou': ''
+		              '^/cloud': ''
 		            }
 		          })
 		        ]

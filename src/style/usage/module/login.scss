@@ -45,6 +45,12 @@ section{
     .forget{
         @include flexbox();
         @include justify-content(flex-end);
+        .tip{
+            @include flex(1);
+            color:rgb(161, 28, 63);
+            font-size: .02rem;
+            display: none;
+        }
     }
     .login-btn{
          width:100%;

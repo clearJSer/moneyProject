@@ -800,6 +800,14 @@ section {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     justify-content: flex-end; }
+    section .forget .tip {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      width: .1px;
+      color: #a11c3f;
+      font-size: .02rem;
+      display: none; }
   section .login-btn {
     width: 100%;
     display: -webkit-box;
