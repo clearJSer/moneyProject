@@ -76,7 +76,14 @@ gulp.task('webserver', function() {
 
 //打包js
 gulp.task('packjs',function(){
-	gulp.src(['./src/script/app-login.js', './src/script/app.js', './src/script/app-invest.js', './src/script/app-more.js'])
+	gulp.src([
+			'./src/script/app-login.js',
+			'./src/script/app.js',
+			'./src/script/app-invest.js',
+			'./src/script/app-more.js',
+			'./src/script/app-register.js',
+			'./src/script/app-account.js'
+		])
 		.pipe(named())
 		.pipe(webpack({
 			output: {
@@ -100,12 +107,15 @@ gulp.task('packjs',function(){
 
 //打包css
 gulp.task('packcss', function() {
-	gulp.src(['./src/style/usage/app-login.scss',
-		'./src/style/usage/app-more.scss',
-		'./src/style/usage/app.scss',
-		'./src/style/lib/*.css',
-		'./src/style/usage/app-invest.scss'
-	])
+	gulp.src([
+			'./src/style/usage/app-login.scss',
+			'./src/style/usage/app-more.scss',
+			'./src/style/usage/app-account.scss',
+			'./src/style/usage/app-register.scss',
+			'./src/style/usage/app.scss',
+			'./src/style/lib/*.css',
+			'./src/style/usage/app-invest.scss'
+		])
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./build/style'))
 })

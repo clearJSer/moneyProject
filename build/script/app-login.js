@@ -44,7 +44,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(10);
+	module.exports = __webpack_require__(13);
 
 
 /***/ }),
@@ -78,13 +78,16 @@
 /* 7 */,
 /* 8 */,
 /* 9 */,
-/* 10 */
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 
 
-	__webpack_require__(11)
+	__webpack_require__(14)
 
 
 
@@ -92,14 +95,14 @@
 
 
 /***/ }),
-/* 11 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 
 
-	var headerTpl = __webpack_require__(12)
-	var login = __webpack_require__(13)
+	var headerTpl = __webpack_require__(15)
+	var login = __webpack_require__(16)
 	var commonUtil = __webpack_require__(6)
 
 	commonUtil.renderBody(login)
@@ -110,13 +113,13 @@
 
 
 /***/ }),
-/* 12 */
+/* 15 */
 /***/ (function(module, exports) {
 
-	module.exports = "<header>	<h1></h1>	<a href=\"javascript:;\">注册</a></header>"
+	module.exports = "<header>	<a href=\"index.html\"><h1></h1></a>	<a href=\"register.html\">注册</a></header>"
 
 /***/ }),
-/* 13 */
+/* 16 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"login-box\">  <div id=\"header\"></div>  <section>  		<div class=\"img-div\">	   		<img src=\"./images/login/login-logo.png\">  		</div>   		<div class=\"input-div phone\">   			<span>手机号码:</span>   			<input type=\"txt\" placeholder=\"请输入手机号码\">   		</div>   		<div class=\"input-div\">   			<span>登录密码:</span>   			<input type=\"password\" placeholder=\"请输入密码\">   			<span class=\"yo-ico\">&#xe633;</span>   		</div>   		<div class=\"forget\">   		<a href=\"javascript:;\">忘记密码</a>   		</div>   		<div class=\"login-btn\">   			<a href=\"javascript:;\">登录</a>   		  	<p>*市场有风险，投资需谨慎</p>   		</div>  </section></div>"

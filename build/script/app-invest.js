@@ -44,7 +44,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(7);
+	module.exports = __webpack_require__(10);
 
 
 /***/ }),
@@ -53,13 +53,13 @@
 /* 3 */
 /***/ (function(module, exports) {
 
-	module.exports = "<header>	<h1><a href=\"index.html\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"login.html\">登录</a>	<a href=\"invest.html\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a></header>"
+	module.exports = "<header>	<h1><a href=\"index.html\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"login.html\">登录</a>	<a href=\"register.html\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a>	<h2>个人账户</h2>	<a href=\"login.html\" class=\"yo-ico btn-back\">&#xe662;</a></header>"
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-	module.exports = "<footer>	<ul>		<li>			<a href=\"index.html\">				<dl>					<dt class=\"yo-ico\">&#xe604;</dt>					<dd>首页</dd>				</dl>			</a>		</li>		<li>			<a href=\"###\">				<dl>					<dt class=\"yo-ico\">&#xe60b;</dt>					<dd>投资</dd>				</dl>			</a>		</li>		<li>			<a href=\"###\">				<dl>					<dt class=\"yo-ico\">&#xe601;</dt>					<dd>账户</dd>				</dl>			</a>		</li>		<li>			<a href=\"more.html\">				<dl>					<dt class=\"yo-ico\">&#xe627;</dt>					<dd>更多</dd>				</dl>			</a>		</li>	</ul></footer>"
+	module.exports = "<footer>	<ul>		<li>			<a href=\"index.html\">				<dl>					<dt class=\"yo-ico\">&#xe604;</dt>					<dd>首页</dd>				</dl>			</a>		</li>		<li>			<a href=\"invest.html\">				<dl>					<dt class=\"yo-ico\">&#xe60b;</dt>					<dd>投资</dd>				</dl>			</a>		</li>		<li>			<a href=\"account.html\">				<dl>					<dt class=\"yo-ico\">&#xe601;</dt>					<dd>账户</dd>				</dl>			</a>		</li>		<li>			<a href=\"more.html\">				<dl>					<dt class=\"yo-ico\">&#xe627;</dt>					<dd>更多</dd>				</dl>			</a>		</li>	</ul></footer>"
 
 /***/ }),
 /* 5 */,
@@ -85,13 +85,16 @@
 
 
 /***/ }),
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 
 
-	__webpack_require__(8)
+	__webpack_require__(11)
 
 
 
@@ -99,13 +102,13 @@
 
 
 /***/ }),
-/* 8 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 
 
-	var invest = __webpack_require__(9)
+	var invest = __webpack_require__(12)
 	var headerTpl = __webpack_require__(3)
 	var footerTpl = __webpack_require__(4)
 	var commonUtil = __webpack_require__(6)
@@ -196,7 +199,7 @@
 
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ (function(module, exports) {
 
 	module.exports = "<div class=\"invest-box\" id=\"invest-box\">	<div id=\"header\"></div>	<section id=\"invest-section\">		<ul class=\"month\" id=\"month\">			<li><p class=\"active\">1-3个月</p></li>			<li><p>6个月</p></li>			<li><p>12个月</p></li>		</ul>		<div class=\"swiper-container\" id=\"swiper-container-main\">		  <div class=\"swiper-wrapper\">		    <div class=\"swiper-slide\">				<ul  id=\"productList\"  class=\"productList\">					<script id=\"investList\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		    </div>		    <div class=\"swiper-slide\">		    	<ul  id=\"productList2\"  class=\"productList\">					<script id=\"investList2\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		    </div>		    <div class=\"swiper-slide\">		    	<ul  id=\"productList3\"  class=\"productList\">					<script id=\"investList3\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		    </div>		  </div>		</div>		<!--使用artTemplate模板-->	</section>	<div id=\"footer\"></div></div>"

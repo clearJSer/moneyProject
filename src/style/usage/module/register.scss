@@ -1,0 +1,201 @@
+@charset "UTF-8";
+html{
+    font-size: 10vw;
+    body{
+        font-size: .5625rem;
+        background: #F5F5F5;
+    }
+}
+.m-register{
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    section{
+        width: 100% !important;
+        background: #fff;
+        @include flex();
+        .mui-content{
+            padding-bottom: 1.4rem;
+            background: #fff;
+            .mg_logo{
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                padding: 0.373333rem 0;
+                img{
+                    width: 4.133333rem;
+                    height: 1.706667rem;
+                }
+            }
+            .login_con{
+                overflow: hidden;
+                width: 100%;
+                padding: 0 0.4rem;
+                .login_input_group{
+                    margin: 0.373333rem 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 1.08rem;
+                    border: 1px solid #b7b7b7;
+                    @include flexbox();
+                    label{
+                        font-size: 0.4rem;
+                        width: 25%;
+                        padding-left: 0.133333rem;
+                        line-height: 1.04rem;
+                        color: #3f3f3f;
+                        display: inline-block;
+                    }
+                    input{
+                        font-size: 0.4rem;
+                        width: 74%;
+                        line-height: 1.04rem;
+                        display: inline-block;
+                        color: #3f3f3f;
+                        border: 0;
+                    }
+                }
+                .verification_input{
+                    margin: 0.373333rem 0;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 1.08rem;
+                    border: 1px solid #b7b7b7;
+                    @include flexbox();
+                    label{
+                        font-size: 0.4rem;
+                        width: 1.8rem;
+                        padding-left: 0.133333rem;
+                        line-height: 1.04rem;
+                        color: #3f3f3f;
+                        display: block;
+                    }
+                    input{
+                        width: 24%;
+                        font-size: 0.4rem;
+                        line-height: 1.04rem;
+                        display: inline-block;
+                        color: #3f3f3f;
+                        border: 0;
+                    }
+                    .verifica_img{
+                        width: 2rem;
+                        height: 1.08rem;
+                        float: left;
+                        margin-left: 0.1rem;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .verifica_a{
+                        font-size: 0.375rem;
+                        height: 1.08rem;
+                        float: right;
+                        line-height: 1rem;
+                        color: #a11c3f;
+                    }
+                }
+                .login_next_con{
+                    .login_input_group{
+                        position: relative;
+                        .login_input_group_s_w{
+                            width: 6.133333rem;
+                            border: 1px solid #b7b7b7;
+                            overflow: hidden;
+                            height: 100%;
+                            label{
+                                width: 1.8rem;
+                            }
+                            input{
+                                width: 3.866667rem;
+                            }
+                        }
+                        a{
+                            font-size: .375rem;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            line-height: 1.04rem;
+                            color: #464646;
+                            width: 3.066667rem;
+                            text-align: center;
+                        }
+                    }
+                    .login_input_group_small{
+                        border: 0;
+                    }
+                    #hidePwd,#showPwd{
+                        color: #ADADAD;
+                        line-height: 1.04rem;
+                        position: absolute;
+                        right: 0.133333rem;
+                    }
+                    #showPwd{
+                        display: none;
+                    }
+                }
+                .agreen_msg{
+                    font-size: .375rem;
+                    margin: 100px 0 30px;
+                    color: #525252;
+                    border: none;
+                    padding-top: 0.133333rem;
+                    @include justify-content(center);
+                    input{
+                        margin-right: 0.106667rem;
+                        width: 0.213333rem;
+                    }
+                    span{
+                        line-height: .25rem;
+                        a{
+                            color: #a11c3f;
+                        }
+                    }
+                }
+            }
+            .invest_btn{
+                width: 100%;
+                text-align: center;
+                margin: 0.5rem auto 0.666667rem;
+                height: 1.12rem;
+                .login_btn{
+                    font-size: 0.5rem;
+                    width: 35%;
+                    background: #FF7220;
+                    border-radius: 20px;
+                    line-height: 1.12rem;
+                    text-align: center;
+                    display: inline-block;
+                    overflow: hidden;
+                    color: #fff;
+                    position: absolute;
+                    left: 3.2rem;
+                    visibility: visible;
+                }
+            }
+        }
+        .tip_msg_p{
+            color: #c7c7c7;
+            text-align: center;
+            line-height: 0.8rem;
+            font-size: .3125rem;
+        }
+    }
+    
+    #header{
+        a:nth-child(2){
+            display: none;
+        }
+        a:nth-child(3){
+            display: none;
+        }
+        a:nth-child(4){
+            display: none;
+        }
+        .btn-back{
+            display: block;
+        }
+    }
+}
+

@@ -26,11 +26,28 @@
         >a:nth-child(3){
             right: 15%;
         }
-        >a:last-child{
+        >a:nth-child(4){
             font-size: .7rem;
             margin-top: -0.15rem;
             top: 17%;
             right: 3%;
+        }
+        h2{
+            font-size: 0.4rem;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%,-50%));
+            display: none;
+        }
+        .btn-back{
+            font-size: 0.4rem;
+            color: #fff;
+            position: absolute;
+            right: 5%;
+            top: 20%;
+            display: none;
         }
     }
 }

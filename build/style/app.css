@@ -720,6 +720,14 @@ a {
   font-family: 'yofont';
   src: url("/images/iconfont/iconfont-more.woff") format("woff"), url("/images/iconfont/iconfont-more.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'yofont';
+  src: url("/images/iconfont/iconfont-account.woff") format("woff"), url("/images/iconfont/iconfont-account.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'yofont';
+  src: url("/images/iconfont/iconfont-reg.woff") format("woff"), url("/images/iconfont/iconfont-reg.ttf") format("truetype"); }
+
 html {
   font-size: 10vw; }
   html body {
@@ -986,11 +994,27 @@ html {
       right: 34%; }
     #header header > a:nth-child(3) {
       right: 15%; }
-    #header header > a:last-child {
+    #header header > a:nth-child(4) {
       font-size: .7rem;
       margin-top: -0.15rem;
       top: 17%;
       right: 3%; }
+    #header header h2 {
+      font-size: 0.4rem;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      display: none; }
+    #header header .btn-back {
+      font-size: 0.4rem;
+      color: #fff;
+      position: absolute;
+      right: 5%;
+      top: 20%;
+      display: none; }
 
 #footer {
   width: 100%;

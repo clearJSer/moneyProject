@@ -780,7 +780,7 @@ html {
     font-size: .5625rem;
     background: #F5F5F5; }
 
-.m-more {
+.m-register {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -789,79 +789,161 @@ html {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   flex-direction: column; }
-  .m-more section {
+  .m-register section {
     width: 100% !important;
     background: #fff;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
     width: .1px; }
-    .m-more section .mui-content {
-      padding-bottom: 1.4rem; }
-      .m-more section .mui-content .more_wrap .mui-table-view {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0; }
-        .m-more section .mui-content .more_wrap .mui-table-view .mui-table-view-cell {
-          position: relative;
-          padding: 0.146667rem 0.2rem;
-          border-bottom: 1px solid #c8c7cc; }
-          .m-more section .mui-content .more_wrap .mui-table-view .mui-table-view-cell .more_icon {
-            font-size: 0.48rem;
-            margin-left: 0.3rem; }
-          .m-more section .mui-content .more_wrap .mui-table-view .mui-table-view-cell .mui-navigate-right {
-            font-size: 0.4rem;
-            display: inline-block;
-            width: 90%;
-            color: #3f3f3f; }
-          .m-more section .mui-content .more_wrap .mui-table-view .mui-table-view-cell .more_icon-right {
-            font-size: 0.4rem;
-            color: #A1A1A2;
-            font-weight: bold;
-            position: absolute;
-            right: 3%;
-            top: 20%; }
-      .m-more section .mui-content .more_wrap .more_bar_01 {
-        background: #efefef;
-        height: 0.4rem;
-        width: 100%; }
-      .m-more section .mui-content .tip_msg_p {
-        font-size: .3rem;
-        color: #c7c7c7;
+    .m-register section .mui-content {
+      padding-bottom: 1.4rem;
+      background: #fff; }
+      .m-register section .mui-content .mg_logo {
+        width: 100%;
         text-align: center;
-        line-height: 0.8rem;
-        overflow: hidden; }
-  .m-more #header a:nth-child(2) {
-    display: none; }
-  .m-more #header a:nth-child(3) {
-    display: none; }
-  .m-more #footer {
-    font-size: .375rem; }
-    .m-more #footer ul li:last-child dd:nth-child(2) {
-      color: #d2a47f !important; }
-
-#footer {
-  width: 100%;
-  background: #efefef;
-  padding: 0.13333rem !important; }
-  #footer ul {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex; }
-    #footer ul li {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      flex: 1;
-      width: .1px;
+        overflow: hidden;
+        padding: 0.373333rem 0; }
+        .m-register section .mui-content .mg_logo img {
+          width: 4.133333rem;
+          height: 1.706667rem; }
+      .m-register section .mui-content .login_con {
+        overflow: hidden;
+        width: 100%;
+        padding: 0 0.4rem; }
+        .m-register section .mui-content .login_con .login_input_group {
+          margin: 0.373333rem 0;
+          overflow: hidden;
+          width: 100%;
+          height: 1.08rem;
+          border: 1px solid #b7b7b7;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex; }
+          .m-register section .mui-content .login_con .login_input_group label {
+            font-size: 0.4rem;
+            width: 25%;
+            padding-left: 0.133333rem;
+            line-height: 1.04rem;
+            color: #3f3f3f;
+            display: inline-block; }
+          .m-register section .mui-content .login_con .login_input_group input {
+            font-size: 0.4rem;
+            width: 74%;
+            line-height: 1.04rem;
+            display: inline-block;
+            color: #3f3f3f;
+            border: 0; }
+        .m-register section .mui-content .login_con .verification_input {
+          margin: 0.373333rem 0;
+          overflow: hidden;
+          width: 100%;
+          height: 1.08rem;
+          border: 1px solid #b7b7b7;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex; }
+          .m-register section .mui-content .login_con .verification_input label {
+            font-size: 0.4rem;
+            width: 1.8rem;
+            padding-left: 0.133333rem;
+            line-height: 1.04rem;
+            color: #3f3f3f;
+            display: block; }
+          .m-register section .mui-content .login_con .verification_input input {
+            width: 24%;
+            font-size: 0.4rem;
+            line-height: 1.04rem;
+            display: inline-block;
+            color: #3f3f3f;
+            border: 0; }
+          .m-register section .mui-content .login_con .verification_input .verifica_img {
+            width: 2rem;
+            height: 1.08rem;
+            float: left;
+            margin-left: 0.1rem; }
+            .m-register section .mui-content .login_con .verification_input .verifica_img img {
+              width: 100%;
+              height: 100%; }
+          .m-register section .mui-content .login_con .verification_input .verifica_a {
+            font-size: 0.375rem;
+            height: 1.08rem;
+            float: right;
+            line-height: 1rem;
+            color: #a11c3f; }
+        .m-register section .mui-content .login_con .login_next_con .login_input_group {
+          position: relative; }
+          .m-register section .mui-content .login_con .login_next_con .login_input_group .login_input_group_s_w {
+            width: 6.133333rem;
+            border: 1px solid #b7b7b7;
+            overflow: hidden;
+            height: 100%; }
+            .m-register section .mui-content .login_con .login_next_con .login_input_group .login_input_group_s_w label {
+              width: 1.8rem; }
+            .m-register section .mui-content .login_con .login_next_con .login_input_group .login_input_group_s_w input {
+              width: 3.866667rem; }
+          .m-register section .mui-content .login_con .login_next_con .login_input_group a {
+            font-size: .375rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 1.04rem;
+            color: #464646;
+            width: 3.066667rem;
+            text-align: center; }
+        .m-register section .mui-content .login_con .login_next_con .login_input_group_small {
+          border: 0; }
+        .m-register section .mui-content .login_con .login_next_con #hidePwd, .m-register section .mui-content .login_con .login_next_con #showPwd {
+          color: #ADADAD;
+          line-height: 1.04rem;
+          position: absolute;
+          right: 0.133333rem; }
+        .m-register section .mui-content .login_con .login_next_con #showPwd {
+          display: none; }
+        .m-register section .mui-content .login_con .agreen_msg {
+          font-size: .375rem;
+          margin: 100px 0 30px;
+          color: #525252;
+          border: none;
+          padding-top: 0.133333rem;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center; }
+          .m-register section .mui-content .login_con .agreen_msg input {
+            margin-right: 0.106667rem;
+            width: 0.213333rem; }
+          .m-register section .mui-content .login_con .agreen_msg span {
+            line-height: .25rem; }
+            .m-register section .mui-content .login_con .agreen_msg span a {
+              color: #a11c3f; }
+      .m-register section .mui-content .invest_btn {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem auto 0.666667rem;
+        height: 1.12rem; }
+        .m-register section .mui-content .invest_btn .login_btn {
+          font-size: 0.5rem;
+          width: 35%;
+          background: #FF7220;
+          border-radius: 20px;
+          line-height: 1.12rem;
+          text-align: center;
+          display: inline-block;
+          overflow: hidden;
+          color: #fff;
+          position: absolute;
+          left: 3.2rem;
+          visibility: visible; }
+    .m-register section .tip_msg_p {
+      color: #c7c7c7;
       text-align: center;
-      margin-top: 0.106667rem; }
-      #footer ul li dl dt {
-        color: #6891E3;
-        height: 0.8rem;
-        font-size: 0.8rem;
-        line-height: 0.8rem; }
-      #footer ul li dl dd {
-        color: #999999 !important;
-        line-height: 0.533333rem; }
+      line-height: 0.8rem;
+      font-size: .3125rem; }
+  .m-register #header a:nth-child(2) {
+    display: none; }
+  .m-register #header a:nth-child(3) {
+    display: none; }
+  .m-register #header a:nth-child(4) {
+    display: none; }
+  .m-register #header .btn-back {
+    display: block; }

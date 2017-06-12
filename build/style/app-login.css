@@ -11,6 +11,14 @@
   font-family: 'yofont';
   src: url("/images/iconfont/iconfont-more.woff") format("woff"), url("/images/iconfont/iconfont-more.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'yofont';
+  src: url("/images/iconfont/iconfont-account.woff") format("woff"), url("/images/iconfont/iconfont-account.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'yofont';
+  src: url("/images/iconfont/iconfont-reg.woff") format("woff"), url("/images/iconfont/iconfont-reg.ttf") format("truetype"); }
+
 /**
  * Yo框架全局base定义
  * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方
@@ -724,7 +732,7 @@ body {
   background-color: #fff; }
 
 #header {
-  height: .48rem;
+  height: .38rem;
   background-color: #4577dc;
   width: 100%;
   padding: 0 .1rem; }
@@ -742,7 +750,7 @@ body {
       background: url(../images/login/logo.png) no-repeat 0 -0.01rem; }
     #header header a {
       color: #fff;
-      font-size: .16rem; }
+      font-size: .1rem; }
 
 section {
   padding: .2rem; }
