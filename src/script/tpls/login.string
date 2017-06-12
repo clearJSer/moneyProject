@@ -6,18 +6,19 @@
   		</div>
    		<div class="input-div phone">
    			<span>手机号码:</span>
-   			<input type="txt" placeholder="请输入手机号码">
+   			<input type="txt" placeholder="请输入手机号码" id="phone" maxlength="11" >
    		</div>
    		<div class="input-div">
    			<span>登录密码:</span>
-   			<input type="password" placeholder="请输入密码">
-   			<span class="yo-ico">&#xe633;</span>
+   			<input type="password" placeholder="请输入密码" id="password">
+   			<span class="yo-ico" id="eyes">&#xe633;</span>
    		</div>
    		<div class="forget">
-   		<a href="javascript:;">忘记密码</a>
+   		  <p class="tip" id="tip">该用户名不存在</p>
+   		   <a href="javascript:;">忘记密码</a>
    		</div>
    		<div class="login-btn">
-   			<a href="javascript:;">登录</a>
+   			<a href="javascript:;" id="login">登录</a>
    		  	<p>*市场有风险，投资需谨慎</p>
    		</div>
   </section>
