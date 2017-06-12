@@ -53,7 +53,7 @@
 /* 3 */
 /***/ (function(module, exports) {
 
-	module.exports = "<header>	<h1><a href=\"index.html\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"login.html\">登录</a>	<a href=\"register.html\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a>	<h2>个人账户</h2>	<a href=\"login.html\" class=\"yo-ico btn-back\">&#xe662;</a></header>"
+	module.exports = "<header>	<h1><a href=\"index.html\"><img src=\"./images/img-index/logo1.png\" /></a></h1>	<a href=\"login.html\">登录</a>	<a href=\"register.html\">注册</a>	<a href=\"###\" class=\"yo-ico\">&#xe600;</a>	<h2>个人账户</h2>	<a href=\"#\" class=\"yo-ico btn-back\">&#xe662;</a></header>"
 
 /***/ }),
 /* 4 */
