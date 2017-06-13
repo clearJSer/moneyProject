@@ -4,5 +4,5 @@
 	<a href="register.html">注册</a>
 	<a href="###" class="yo-ico">&#xe600;</a>
 	<h2>个人账户</h2>
-	<a href="#" class="yo-ico btn-back">&#xe662;</a>
+	<a onclick="javascript:history.go(-1);" class="yo-ico btn-back">&#xe662;</a>
 </header>
