@@ -4,7 +4,10 @@
   "description": "my WebAPP",
   "main": "index.js",
   "scripts": {
-    "mk": "json-server ./mock/mock.js "
+    "mk": "json-server ./mock/mock.js ",
+    "db": "json-server ./src/mock/mock.js",
+    "dev": "gulp --env development",
+    "build": "gulp pack --env production"
   },
   "repository": {
     "type": "git",

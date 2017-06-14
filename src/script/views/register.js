@@ -10,7 +10,7 @@ commonUtil.render(document.getElementById('header'), headerTpl)
 
 function register(){
 	var self = this;
-	var msgCode = null;
+	var msgCode;
 	var arr = [false,false,false];
 	
 	self.init = function(){
@@ -38,27 +38,10 @@ function register(){
 					
 					//发送短信
 					$.ajax({
-						url: "http://redlemon.applinzi.com/sendMsg?phone=" + $('#mobile').val(),
+						url: "/cloud/sendMsg?phone=" + $('#mobile').val(),
 						success:function(res){
 							msgCode = res;
-							
-							$("#code").on("blur",function(){
-								if($("#code").val()){
-									//判断输入的验证码是否匹配随机验证码！	
-									if(msgCode == $('#code').val()){
-										$('.msg_error').css('display','none');
-										arr[1]  = true;//成功
-									}else{
-										arr[1]  = false;//失败
-										$(".mes_error").text("短信验证码输入有误");
-										$('.msg_error').css('display','block');
-									}
-								}else{
-									arr[1]  = false;//失败
-									$(".mes_error").text("请输入短信验证码");
-									$(".mes_error").css("display","block");
-								}
-							})
+							console.log(msgCode)
 						}
 					})
 					
@@ -113,6 +96,24 @@ function register(){
 				$("#checkPhone").css("display","block");
 			}
 		})
+		//短信验证
+		$("#code").on("blur",function(){
+			if($("#code").val()){
+				//判断输入的验证码是否匹配随机验证码！	
+				if(msgCode == $('#code').val()){
+					$('.msg_error').css('display','none');
+					arr[1]  = true;//成功
+				}else{
+					arr[1]  = false;//失败
+					$(".msg_error").text("短信验证码输入有误");
+					$('.msg_error').css('display','block');
+				}
+			}else{
+				arr[1]  = false;//失败
+				$(".msg_error").text("请输入短信验证码");
+				$(".msg_error").css("display","block");
+			}
+		})
 		//密码
 		$("#pwd").on("input",function(){
 			if($("#pwd").val()){
@@ -132,7 +133,7 @@ function register(){
 			}
 		})
 		//点击立即注册
-		$(".submit").on("click",function(){
+		$(".login_btn").on("click",function(){
 			
 			var mobile = $('#mobile').val();
 			var password = $('#pwd').val();
@@ -146,18 +147,30 @@ function register(){
 				}
 			}
 			if(result){
-//				if($('.checkbox').is(':checked')){
-//					
-//					$('.loading').css('display','block');
-//					base.setCookie("username",user,10);
-//					base.setCookie("password",password,10);
-//					alert("用户注册成功！3s后将跳转到登陆页面！")
-//					var timer =	setTimeout(function(){
-//						window.location.href = "login.html";
-//					},3000);
-//				}else{
-//					alert('请阅读并同意服务协议！')
-//				}	
+				if($('.clear_input').is(':checked')){
+					
+					//注册
+					$.ajax({
+						url: '/cloud/register?phone='+mobile+'&password='+password,
+						success:function(res){
+							if(res != 0){
+								if(res == 1){
+									alert("用户注册成功！3s后将跳转到登陆页面！")
+									var timer =	setTimeout(function(){
+										window.location.href = "login.html";
+									},3000);
+								}else{
+									alert("用户注册失败！请重新注册！")
+								}
+							}else{
+								$("#checkPhone").text("该移动电话已在【东宏金融】平台注册！");
+								$("#checkPhone").css("display","block");
+							}
+						}
+					})
+				}else{
+					alert('请阅读并同意服务协议！')
+				}	
 			}else{
 				alert("您注册的信息有误，请重新注册！");
 			}
