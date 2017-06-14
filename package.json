@@ -4,7 +4,7 @@
   "description": "my WebAPP",
   "main": "index.js",
   "scripts": {
-	  "mk": "json-server ./mock/mock.js "
+    "mk": "json-server ./mock/mock.js "
   },
   "repository": {
     "type": "git",

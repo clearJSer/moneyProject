@@ -13,6 +13,10 @@
 		    	<div class="isroll" id="isroll-1">
 					<ul  id="productList"  class="productList">
 						<script id="investList" type="text/html">
+							<div class="head">
+				                <img src="./images/arrow.png" />
+				                <span>下拉刷新...</span>
+				             </div>
 							{{each data}}
 							<li>
 								<div class="info-box">
