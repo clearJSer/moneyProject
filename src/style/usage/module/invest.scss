@@ -20,12 +20,13 @@ html{
                 text-align: center;
                 line-height: 0.9rem;
                 color: #343434;
-                @include border(0 0 2px 0,#fff);
+                @include border(0 0 3px 0,#fff);
             }
             .active{
-                @include border(0 0 2px 0,#007aff);
+                @include border(0 0 3px 0,#007aff);
                 color:#007aff ;
             }
+            
         }
     }
     section{
@@ -108,9 +109,27 @@ html{
 .swiper-container{
     height: 100%;
 }
-.foot {
+.head {
         text-align: center;
         height: .4rem;
+        line-height: .4rem;
+        margin:.1rem 0;
+    }
+    .head img {
+        width: .4rem;
+        display: inline-block;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transition: transform 150ms;
+        -webkit-transition: transform 150ms;
+    }
+    .up {
+        transform: rotate(360deg) !important;
+        -webkit-transform: rotate(360deg) !important;
+    }
+.foot {
+        text-align: center;
+        height: .8rem;
         line-height: .4rem;
         padding : .3rem 0;
         @include border(1px,red)

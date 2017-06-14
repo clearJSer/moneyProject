@@ -117,6 +117,8 @@
 	commonUtil.render(document.getElementById('header'), headerTpl)
 	commonUtil.render(document.getElementById('footer'), footerTpl)
 
+	var list = [];
+
 	var mySwiper = new Swiper('#swiper-container-main', {
 		//loop: true,
 		//autoplay : 2000,
@@ -168,6 +170,7 @@
 	//	},
 		url: '/mock/listmore',
 		success:function(res){
+			list=res.data;
 			var html = template('investList',res)
 			//console.log(html);
 			document.getElementById("productList").innerHTML = html;
@@ -176,37 +179,75 @@
 	    		mouseWheel :true,
 	    		probeType :3
 			});
-			myScroll.on('scrollEnd', function () {
-				console.log(this.y)
-	  		// 下拉刷新
-		        if (this.y >= -45 && this.y < 0) {
-		          myScroll.scrollTo(0, -45);
-		          head.removeClass('up');
-		        } else if (this.y >= 0) {
-		            head.attr('src', './images/ajax-loader.gif');
-		            //ajax下拉刷新数据
-	//	            ajaxUtil.ajax({
-	//	              url: opt.urlRefresh,
-	//	              data: {
-	//	                pageNo: 1,
-	//	                pageSize: 3
-	//	              },
-	//	              callback: function (res) {
-	//	                myScroll.scrollTo(0, -40);
-	//	                head.removeClass('up');
-	//	                head.attr('src', './images/arrow.png');
-	//	
-	//	                var page = res.content.data.page;
-	//	                page.result = page.result.concat(list)
-	//	                var html = template(opt.tplId, page)
-	//	                opt.tplContainer.html(html)
-	//	
-	//	                list = page.result
-	//	            }
-	//	          })
+			var head = $('.head img'),
+			foot = $('.foot img');
+			myScroll.scrollBy(0, -41);
+			myScroll.on('scroll', function () {
+		    	var y = this.y;
+		        maxY = this.maxScrollY - y;
+		        if (y >= 0) {
+		          var topImgHasClass = head.hasClass('up'); 
+		          !topImgHasClass && head.addClass('up');
+		          return '';
 		        }
-	      	});
-		}
+		        if (maxY >= 100) {
+		          var bottomImgHasClass = head.hasClass('down');
+		          !bottomImgHasClass && foot.addClass('down');
+		          return '';
+		        }
+	        });
+		  myScroll.on('scrollEnd', function () {
+	        // 下拉刷新
+	        if (this.y >= -41 && this.y < 0) {
+	          myScroll.scrollTo(0, -41);
+	          head.removeClass('up');
+	        } else if (this.y >= 0) {
+	            $('.head img').attr('src', './images/ajax-loader.gif');
+	            //ajax下拉刷新数据
+				setTimeout(function(){
+					$.ajax({
+						url:'/mock/listmore',
+						success:function(res){
+							list = res.data;
+							var html = template("investList",res)
+							//console.log(html);
+							document.getElementById("productList").innerHTML = html;
+							myScroll.scrollTo(0, -41);
+	           				head.removeClass('up');
+	            			head.attr('src', '../images/arrow.png');
+						}
+					})
+				},500);
+	        }
+
+	        // 上拉加载更多
+	        var maxY = this.maxScrollY - this.y;
+	        var self = this;
+	        if (maxY > -100 && maxY < 0) {
+	            myScroll.scrollTo(0, self.maxScrollY + 100);
+	            $('.foot img').removeClass('down')
+	        } else if (maxY >= 0) {
+	          $('.foot img').attr('src', './images/ajax-loader.gif');
+	          setTimeout(function(){
+	          	$.ajax({
+		          	type:"get",
+		          	url:"/mock/listmore",
+		          	success:function(res){
+			          	  myScroll.scrollTo(0, self.y + 41);
+			              $('.foot img').removeClass('down');
+			              $('.foot img').attr('src', './images/arrow.png');
+			              res.data = res.data.concat(list)
+			              var html = template("investList", res)
+			              document.getElementById("productList").innerHTML = html;
+			
+			              myScroll.refresh();
+			              list = res.data;
+		          	}
+	           });	
+	          },500)
+	        }
+	      })
+	    }
 	})
 
 	//getData('/mock/listmore',"investList",'productList')
@@ -238,7 +279,7 @@
 	//				},
 
 	//iscroll
-	console.log(IScroll)
+
 
 
 
@@ -246,7 +287,7 @@
 /* 12 */
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"invest-box\" id=\"invest-box\">	<div id=\"header\"></div>	<section id=\"invest-section\">		<ul class=\"month\" id=\"month\">			<li><p class=\"active\">1-3个月</p></li>			<li><p>6个月</p></li>			<li><p>12个月</p></li>		</ul>		<div class=\"swiperbox\">			<div class=\"swiper-container\" id=\"swiper-container-main\">		  <div class=\"swiper-wrapper\">		    <div class=\"swiper-slide\">		    	<div class=\"isroll\" id=\"isroll-1\">					<ul  id=\"productList\"  class=\"productList\">						<script id=\"investList\" type=\"text/html\">							{{each data}}							<li>								<div class=\"info-box\">									<div class=\"listLeft\">										<h4>{{$value.name}}</h4>										<p>											<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>												<span><i>{{$value.amount}}</i><i>万元</i></span>												<span><i>{{$value.span}}</i><i>天</i></span>											</p>										<p>											<span><i class=\"active\">预期年化收益率</i></span>												<span>融资金额</span>												<span>还款期限</span>											</p>									</div>									<!--&#xe7bb; 还款中-->									<div class=\"listRight\">										<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>									</div>								</div>								<div class=\"progress-num\">									<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>								</div>								<div class=\"progress\">									<div class=\"progress-son\">																			</div>								</div>							</li>							{{/each}}							 <div class=\"foot\">			                    <img src=\"./images/arrow.png\"/>			                    <span>上拉加载更多...</span>				             <div>						</script>					</ul>				</div>		    </div>		    <div class=\"swiper-slide\">		    	<div id=\"isroll-2\" class=\"isroll\">		    	<ul  id=\"productList2\"  class=\"productList\">					<script id=\"investList2\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		    	</div>		    </div>		    <div class=\"swiper-slide\">		    	<div id=\"isroll-3\" class=\"isroll\">		    	<ul  id=\"productList3\"  class=\"productList\">					<script id=\"investList3\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		   		</div>		    </div>		  </div>		</div>		</div>				<!--使用artTemplate模板-->	</section>	<div id=\"footer\"></div></div>"
+	module.exports = "<div class=\"invest-box\" id=\"invest-box\">	<div id=\"header\"></div>	<section id=\"invest-section\">		<ul class=\"month\" id=\"month\">			<li><p class=\"active\">1-3个月</p></li>			<li><p>6个月</p></li>			<li><p>12个月</p></li>		</ul>		<div class=\"swiperbox\">			<div class=\"swiper-container\" id=\"swiper-container-main\">		  <div class=\"swiper-wrapper\">		    <div class=\"swiper-slide\">		    	<div class=\"isroll\" id=\"isroll-1\">					<ul  id=\"productList\"  class=\"productList\">						<script id=\"investList\" type=\"text/html\">							<div class=\"head\">				                <img src=\"./images/arrow.png\" />				                <span>下拉刷新...</span>				             </div>							{{each data}}							<li>								<div class=\"info-box\">									<div class=\"listLeft\">										<h4>{{$value.name}}</h4>										<p>											<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>												<span><i>{{$value.amount}}</i><i>万元</i></span>												<span><i>{{$value.span}}</i><i>天</i></span>											</p>										<p>											<span><i class=\"active\">预期年化收益率</i></span>												<span>融资金额</span>												<span>还款期限</span>											</p>									</div>									<!--&#xe7bb; 还款中-->									<div class=\"listRight\">										<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>									</div>								</div>								<div class=\"progress-num\">									<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>								</div>								<div class=\"progress\">									<div class=\"progress-son\">																			</div>								</div>							</li>							{{/each}}							 <div class=\"foot\">			                    <img src=\"./images/arrow.png\"/>			                    <span>上拉加载更多...</span>				             <div>						</script>					</ul>				</div>		    </div>		    <div class=\"swiper-slide\">		    	<div id=\"isroll-2\" class=\"isroll\">		    	<ul  id=\"productList2\"  class=\"productList\">					<script id=\"investList2\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		    	</div>		    </div>		    <div class=\"swiper-slide\">		    	<div id=\"isroll-3\" class=\"isroll\">		    	<ul  id=\"productList3\"  class=\"productList\">					<script id=\"investList3\" type=\"text/html\">						{{each data}}						<li>							<div class=\"info-box\">								<div class=\"listLeft\">									<h4>{{$value.name}}</h4>									<p>										<span><i class=\"active percent\">{{$value.rate}}</i><i class=\"active\">%</i></span>											<span><i>{{$value.amount}}</i><i>万元</i></span>											<span><i>{{$value.span}}</i><i>天</i></span>										</p>									<p>										<span><i class=\"active\">预期年化收益率</i></span>											<span>融资金额</span>											<span>还款期限</span>										</p>								</div>								<!--&#xe7bb; 还款中-->								<div class=\"listRight\">									<a href=\"javascript:;\" class=\"yo-ico ico-img\">&#xe624;</a>								</div>							</div>							<div class=\"progress-num\">								<span class=\"percent-num\">{{$value.stepAmount}}</span><span>%</span>							</div>							<div class=\"progress\">								<div class=\"progress-son\">																	</div>							</div>						</li>						{{/each}}					</script>				</ul>		   		</div>		    </div>		  </div>		</div>		</div>				<!--使用artTemplate模板-->	</section>	<div id=\"footer\"></div></div>"
 
 /***/ })
 /******/ ]);
