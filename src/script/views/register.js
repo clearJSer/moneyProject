@@ -41,7 +41,7 @@ function register(){
 						url: "/cloud/sendMsg?phone=" + $('#mobile').val(),
 						success:function(res){
 							msgCode = res;
-							console.log(msgCode)
+							//console.log(msgCode)
 						}
 					})
 					
@@ -147,8 +147,7 @@ function register(){
 				}
 			}
 			if(result){
-				if($('.clear_input').is(':checked')){
-					
+				if($('#agreement').is(':checked')){
 					//注册
 					$.ajax({
 						url: '/cloud/register?phone='+mobile+'&password='+password,

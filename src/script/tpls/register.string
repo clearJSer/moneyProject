@@ -40,7 +40,7 @@
 	                <div style="display: none;" id="pwdCheck">密码只能由数字和字母组成</div>
 	            </div>
 		     	<div class="login_input_group agreen_msg">
-		     	    <input type="checkbox" name="agreement" class="clear_input" checked="checked" id="agreement" value="">
+		     	    <input type="checkbox" name="agreement" class="clear_input" id="agreement" value="">
 	     	    	<span>我已阅读并同意<a href="###">《用户协议》</a></span>
 		     	</div>
 		    </div>

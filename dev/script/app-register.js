@@ -142,7 +142,7 @@
 							url: "/cloud/sendMsg?phone=" + $('#mobile').val(),
 							success:function(res){
 								msgCode = res;
-								console.log(msgCode)
+								//console.log(msgCode)
 							}
 						})
 						
@@ -248,8 +248,7 @@
 					}
 				}
 				if(result){
-					if($('.clear_input').is(':checked')){
-						
+					if($('#agreement').is(':checked')){
 						//注册
 						$.ajax({
 							url: '/cloud/register?phone='+mobile+'&password='+password,
@@ -300,7 +299,7 @@
 /***/ 22:
 /***/ (function(module, exports) {
 
-	module.exports = "<div class=\"m-register\">	<div id=\"header\"></div>	<section>		<div class=\"mui-content\">			<div class=\"mg_logo\">		    	<img src=\"images/img-register/logo.png\">		    </div>		    <div class=\"login_con\">		    	<div class=\"login_input_group\">					<label for=\"mobile\">手机号码：</label>					<input type=\"text\" class=\"clear_input\" placeholder=\"请输入手机号\" id=\"mobile\" name=\"mobile\">	     	  	</div>	     	  	<div class=\"TBLgNameRem\">	                <div style=\"display: none;\" id=\"checkPhone\">手机号码格式错误</div>	            </div>	     	  	<div class=\"verification_input\">					<label for=\"verificationCode\">验证码：</label>					<input type=\"text\" class=\"verifica_input\" id=\"verificationCode\">					<p class=\"verifica_img\"></p>					<a href=\"javascript:;\" class=\"verifica_a\">看不清楚，换一张</a>				</div>				<div class=\"error_warning\" style=\"display: none;\">您输入的验证码有误!</div>				<div class=\"login_next_con\">		     		<div class=\"login_input_group login_input_group_small\">			     	    <div class=\"login_input_group_s_w\">			     	  		<label for=\"code\">验证码：</label>			     	  		<input type=\"text\" class=\"clear_input\" placeholder=\"请输入手机验证码\" id=\"code\" name=\"code\">			     	  	</div>			     	  	<button class=\"login_code\" id=\"btnSendCode\">获取验证码</button>			     	</div>					<div class=\"msg_error\" style=\"display: none;\">您输入的短信验证码有误!</div>			     	<div class=\"login_input_group\">			     	  	<label for=\"pwd\">登录密码：</label>			     	  	<input type=\"password\" class=\"clear_input\" placeholder=\"请输入密码\" id=\"pwd\" name=\"pwd\">			     	  	<i id=\"hidePwd\" class=\"yo-ico\">&#xe77d;</i>			     	  	<span id=\"showPwd\" class=\"yo-ico\">&#xe65a;</span>			     	</div>		     	</div>		     	<div class=\"TBLgNameRem\">	                <div style=\"display: none;\" id=\"pwdCheck\">密码只能由数字和字母组成</div>	            </div>		     	<div class=\"login_input_group agreen_msg\">		     	    <input type=\"checkbox\" name=\"agreement\" class=\"clear_input\" checked=\"checked\" id=\"agreement\" value=\"\">	     	    	<span>我已阅读并同意<a href=\"###\">《用户协议》</a></span>		     	</div>		    </div>		    <div class=\"invest_btn\">				<a class=\"login_btn\" href=\"javascript:;\">注册  </a>			</div>		</div>		<div class=\"tip_msg_p\">* 市场有风险，投资需谨慎</div>	</section></div>"
+	module.exports = "<div class=\"m-register\">	<div id=\"header\"></div>	<section>		<div class=\"mui-content\">			<div class=\"mg_logo\">		    	<img src=\"images/img-register/logo.png\">		    </div>		    <div class=\"login_con\">		    	<div class=\"login_input_group\">					<label for=\"mobile\">手机号码：</label>					<input type=\"text\" class=\"clear_input\" placeholder=\"请输入手机号\" id=\"mobile\" name=\"mobile\">	     	  	</div>	     	  	<div class=\"TBLgNameRem\">	                <div style=\"display: none;\" id=\"checkPhone\">手机号码格式错误</div>	            </div>	     	  	<div class=\"verification_input\">					<label for=\"verificationCode\">验证码：</label>					<input type=\"text\" class=\"verifica_input\" id=\"verificationCode\">					<p class=\"verifica_img\"></p>					<a href=\"javascript:;\" class=\"verifica_a\">看不清楚，换一张</a>				</div>				<div class=\"error_warning\" style=\"display: none;\">您输入的验证码有误!</div>				<div class=\"login_next_con\">		     		<div class=\"login_input_group login_input_group_small\">			     	    <div class=\"login_input_group_s_w\">			     	  		<label for=\"code\">验证码：</label>			     	  		<input type=\"text\" class=\"clear_input\" placeholder=\"请输入手机验证码\" id=\"code\" name=\"code\">			     	  	</div>			     	  	<button class=\"login_code\" id=\"btnSendCode\">获取验证码</button>			     	</div>					<div class=\"msg_error\" style=\"display: none;\">您输入的短信验证码有误!</div>			     	<div class=\"login_input_group\">			     	  	<label for=\"pwd\">登录密码：</label>			     	  	<input type=\"password\" class=\"clear_input\" placeholder=\"请输入密码\" id=\"pwd\" name=\"pwd\">			     	  	<i id=\"hidePwd\" class=\"yo-ico\">&#xe77d;</i>			     	  	<span id=\"showPwd\" class=\"yo-ico\">&#xe65a;</span>			     	</div>		     	</div>		     	<div class=\"TBLgNameRem\">	                <div style=\"display: none;\" id=\"pwdCheck\">密码只能由数字和字母组成</div>	            </div>		     	<div class=\"login_input_group agreen_msg\">		     	    <input type=\"checkbox\" name=\"agreement\" class=\"clear_input\" id=\"agreement\" value=\"\">	     	    	<span>我已阅读并同意<a href=\"###\">《用户协议》</a></span>		     	</div>		    </div>		    <div class=\"invest_btn\">				<a class=\"login_btn\" href=\"javascript:;\">注册  </a>			</div>		</div>		<div class=\"tip_msg_p\">* 市场有风险，投资需谨慎</div>	</section></div>"
 
 /***/ })
 

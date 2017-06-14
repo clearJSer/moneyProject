@@ -146,7 +146,7 @@
 		}
 		$.ajax({
 			type:"get",
-			url:"cloud/login?password="+phone+"&phone="+passwordTxt,
+			url:"cloud/login?password="+passwordTxt+"&phone="+phone,
 			async:true,
 			success:function(data){
 				if(data == "0"){
