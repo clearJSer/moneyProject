@@ -108,7 +108,7 @@ gulp.task('packjs',function(){
 	    .pipe(gulpif(options.env === 'production', gulp.dest('./build/rev/script')))
 })
 
-//打包scss
+//打包css
 gulp.task('packcss', function() {
 	return gulp.src([
 			'./src/style/usage/app-login.scss',
